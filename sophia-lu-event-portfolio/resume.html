@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Résumé — Sophia Lu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&family=Space+Mono&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fffdf8;--navy:#26314a;--rust:#9a4e33;--mid:#5b5a57;--warm:#f7f1e6;--border:#e0d8cc;--text:#2f3340;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;line-height:1.6;}
+a{color:inherit;text-decoration:none;}
+a:hover{color:var(--rust);}
+.topnav{display:flex;align-items:center;justify-content:space-between;padding:20px 48px;border-bottom:1px solid var(--border);position:sticky;top:0;background:var(--bg);z-index:100;}
+.nav-name{font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:var(--navy);}
+.nav-links{display:flex;gap:32px;font-size:14px;color:var(--mid);}
+.nav-links a:hover{color:var(--rust);}
+.page{max-width:1100px;margin:0 auto;padding:0 48px 80px;}
+.section{margin-top:72px;}
+.section-label{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--mid);margin-bottom:24px;padding-bottom:12px;border-bottom:1px solid var(--border);}
+.hero{padding:72px 0 56px;border-bottom:1.5px solid var(--navy);}
+.hero h1{font-family:'Playfair Display',serif;font-size:64px;line-height:1.05;color:var(--navy);margin-bottom:16px;}
+.hero .subtitle{font-size:20px;color:var(--mid);margin-bottom:24px;}
+.hero .desc{font-size:16px;max-width:620px;color:var(--text);line-height:1.7;}
+.hero-meta{margin-top:24px;display:flex;gap:24px;font-size:14px;color:var(--mid);}
+.hero-meta a:hover{color:var(--rust);}
+.work-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+.card{border:1.5px solid var(--navy);border-radius:4px;padding:32px;background:var(--bg);display:block;transition:.15s;}
+.card:hover{box-shadow:4px 4px 0 var(--navy);transform:translate(-2px,-2px);}
+.card-tag{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);margin-bottom:12px;}
+.card h3{font-family:'Playfair Display',serif;font-size:24px;color:var(--navy);margin-bottom:8px;}
+.card .card-role{font-size:13px;color:var(--mid);margin-bottom:16px;}
+.card p{font-size:14px;line-height:1.7;color:var(--text);}
+.card-link{display:inline-flex;align-items:center;gap:6px;margin-top:20px;font-size:13px;font-weight:600;color:var(--navy);border-bottom:1.5px solid var(--navy);padding-bottom:1px;}
+.sk-grid{display:grid;gap:0;}
+.sk-row{display:grid;grid-template-columns:160px 1fr;gap:16px;align-items:start;padding:14px 0;border-top:1px solid var(--border);}
+.sk-row:first-child{border-top:0;padding-top:0;}
+.sk-label{font-family:'Space Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--mid);line-height:28px;}
+.chips{display:flex;flex-wrap:wrap;gap:8px;}
+.chip{display:inline-flex;align-items:center;min-height:28px;padding:0 12px;border-radius:999px;border:1px solid var(--border);background:var(--warm);font-size:13px;color:var(--text);}
+.contact-block{background:var(--warm);border:1.5px solid var(--navy);border-radius:4px;padding:40px;margin-top:72px;}
+.contact-block h2{font-family:'Playfair Display',serif;font-size:32px;color:var(--navy);margin-bottom:12px;}
+.contact-block p{color:var(--mid);margin-bottom:24px;}
+.cta-row{display:flex;gap:16px;flex-wrap:wrap;}
+.btn{display:inline-flex;align-items:center;gap:8px;height:44px;padding:0 20px;border:1.5px solid var(--navy);border-radius:3px;font-size:14px;font-weight:600;color:var(--navy);box-shadow:3px 3px 0 var(--navy);transition:.1s;text-decoration:none;}
+.btn:hover{color:var(--rust);border-color:var(--rust);box-shadow:3px 3px 0 var(--rust);transform:translate(-1px,-1px);}
+.btn.primary{background:var(--navy);color:var(--bg);}
+.btn.primary:hover{background:var(--rust);border-color:var(--rust);}
+.foot{margin-top:64px;padding-top:24px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--mid);}
+.case-hero{padding:56px 0 40px;border-bottom:1.5px solid var(--navy);}
+.case-hero .back{font-family:'Space Mono',monospace;font-size:11px;color:var(--mid);display:inline-flex;align-items:center;gap:6px;margin-bottom:20px;}
+.case-hero h1{font-family:'Playfair Display',serif;font-size:48px;line-height:1.1;color:var(--navy);margin-bottom:12px;}
+.case-body{padding:56px 0;max-width:800px;}
+.case-body h2{font-family:'Playfair Display',serif;font-size:28px;color:var(--navy);margin:48px 0 16px;}
+.case-body h2:first-child{margin-top:0;}
+.case-body p{font-size:15px;line-height:1.75;color:var(--text);margin-bottom:16px;}
+.case-body ul{padding-left:20px;margin-bottom:16px;}
+.case-body li{font-size:15px;line-height:1.75;color:var(--text);margin-bottom:8px;}
+.stat-row{display:flex;gap:32px;flex-wrap:wrap;background:var(--warm);border:1px solid var(--border);border-radius:4px;padding:28px 32px;margin:32px 0;}
+.stat .num{font-family:'Playfair Display',serif;font-size:36px;color:var(--navy);line-height:1;}
+.stat .label{font-size:12px;color:var(--mid);margin-top:4px;}
+.next-cases{margin-top:72px;padding-top:32px;border-top:1.5px solid var(--navy);}
+.next-cases h3{font-family:'Space Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--mid);margin-bottom:20px;}
+.next-row{display:flex;gap:16px;flex-wrap:wrap;}
+.rs{margin-top:48px;}
+.rsh{display:flex;align-items:center;gap:16px;margin-bottom:24px;}
+.rsh h2{font-family:'Space Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--mid);white-space:nowrap;}
+.line{flex:1;height:1px;background:var(--border);}
+.entry{padding:20px 0;border-bottom:1px solid var(--border);}
+.entry:last-child{border-bottom:0;}
+.erow{display:flex;align-items:baseline;justify-content:space-between;gap:24px;}
+.role{margin:0;font-size:18px;font-weight:600;color:var(--navy);}
+.when{font-family:'Space Mono',monospace;font-size:11px;color:var(--mid);white-space:nowrap;}
+.org{margin-top:2px;font-size:14px;color:var(--mid);}
+.bul{margin:10px 0 0;padding-left:18px;font-size:14px;line-height:1.65;color:var(--text);}
+.bul li+li{margin-top:6px;}
+.sub-entry{margin-top:14px;padding:14px 16px;border-radius:4px;background:var(--warm);}
+.sub-entry .role{font-size:15px;}
+.cs-link{font-size:12px;font-weight:600;color:var(--navy);border-bottom:1px solid var(--navy);}
+.resume-dl{display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 16px;border:1.5px solid var(--navy);border-radius:3px;background:var(--bg);color:var(--navy);font-size:14px;font-weight:600;box-shadow:0 3px 0 var(--navy);}
+@media(max-width:768px){.topnav{padding:16px 20px;}.page{padding:0 20px 64px;}.hero h1{font-size:40px;}.work-grid{grid-template-columns:1fr;}.sk-row{grid-template-columns:1fr;gap:8px;}.erow{flex-direction:column;gap:2px;}}
+</style>
+</head>
+<body>
+<nav class="topnav">
+  <a class="nav-name" href="index.html">Sophia Lu</a>
+  <div class="nav-links">
+    <a href="index.html">Work</a>
+    <a href="resume.html">R&eacute;sum&eacute;</a>
+    <a href="mailto:lusophia95@gmail.com">Let&rsquo;s talk</a>
+  </div>
+</nav>
+
+<div class="page">
+  <div class="hero" style="display:flex;align-items:flex-end;justify-content:space-between;gap:32px;flex-wrap:wrap;padding:56px 0 40px;">
+    <div>
+      <h1 style="font-family:'Playfair Display',serif;font-size:48px;line-height:1;color:var(--navy);margin-bottom:8px;">Sophia Lu</h1>
+      <div style="font-size:18px;color:var(--mid);">GTM Strategy &amp; Growth Marketing</div>
+    </div>
+    <div style="display:flex;flex-direction:column;align-items:flex-end;gap:6px;font-size:14px;color:var(--mid);">
+      <span>New York</span>
+      <a href="mailto:lusophia95@gmail.com" style="color:var(--navy);">lusophia95@gmail.com</a>
+      <a href="https://www.linkedin.com/in/sophialu520/" target="_blank" style="color:var(--navy);">linkedin.com/in/sophialu520</a>
+      <a class="resume-dl" href="Sophia_Lu_GTM_Resume.pdf" download style="margin-top:8px;">&#8595; Download PDF</a>
+    </div>
+  </div>
+
+  <section class="rs">
+    <div class="rsh"><h2>Experience</h2><span class="line"></span></div>
+    <div class="entry">
+      <div class="erow"><h3 class="role">COO</h3><span class="when">July 2026 &ndash; Present</span></div>
+      <div class="org">Artifice</div>
+      <ul class="bul">
+        <li>Developed a B2B event marketing offer from early community demand, defining audience positioning, sponsorship opportunities, and partnership proposals.</li>
+        <li>Led targeting, partner coordination, and delivery for a 50-seat launch; 180 RSVPs, 61 waitlisted, approximately 45K organic views.</li>
+        <li>Segmented 36K contacts into approximately 4K relevant profiles and built CRM and outreach workflows for community and partnership development.</li>
+        <li>Built sponsorship materials and partner packages across programming, hospitality, artist collaborations, and brand activations.</li>
+      </ul>
+    </div>
+    <div class="entry">
+      <div class="erow"><h3 class="role">Co Founder &amp; Principal Consultant, Product &amp; GTM</h3><span class="when">Jan 2025 &ndash; Present</span></div>
+      <div class="org">Hema Designs</div>
+      <ul class="bul">
+        <li>Led client engagements across 6 early-stage startups, diagnosing product and GTM challenges, shaping strategy, and translating recommendations into scoped implementation plans.</li>
+        <li>Advised founders on positioning, messaging, landing pages, and pitch narratives for investor and buyer audiences.</li>
+        <li>Standardized discovery and intake, reducing scoping turnaround from multiple days to the same day.</li>
+        <li>Built Claude Code and OpenClaw research and planning workflows, reducing recurring work from hours to approximately 30 minutes.</li>
+      </ul>
+      <div class="sub-entry">
+        <div class="erow"><h4 class="role">PMMCA &middot; GTM, Conversion &amp; Lifecycle Marketing</h4><a class="cs-link" href="pmmca.html">See the case study &rarr;</a></div>
+        <ul class="bul">
+          <li>Analyzed a funnel reliant on founder outreach for 80&ndash;90% of reported conversions; refined positioning, pricing, and purchase journeys.</li>
+          <li>Launched a four-week cohort with landing pages, lifecycle emails, onboarding, Stripe payment testing, and Circle access workflows.</li>
+          <li>Used member feedback to reposition annual membership around coaching access; developed renewal messaging and upgrades after a three-month trial.</li>
+        </ul>
+      </div>
+      <div class="sub-entry" style="margin-top:10px;">
+        <div class="erow"><h4 class="role">Meg Prime Pay &middot; Product Strategy &amp; Onboarding</h4><a class="cs-link" href="megprimepay.html">See the case study &rarr;</a></div>
+        <ul class="bul">
+          <li>Designed onboarding for crypto funding, ACH timing, and bill payments while identifying product risks before development.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="entry">
+      <div class="erow"><h3 class="role">Business Development &amp; Partnerships</h3><span class="when">Jan 2026 &ndash; Present</span></div>
+      <div class="org">Jointley</div>
+      <ul class="bul">
+        <li>Managed 30+ partnership prospects from outreach and qualification through scoping, proposals, and project handoff.</li>
+        <li>Qualified agencies, consultancies, and studios for collaborative engagements serving seed to Series A startups.</li>
+        <li>Built partner onboarding and follow-up workflows, connecting external conversations with internal ownership and delivery.</li>
+      </ul>
+    </div>
+    <div class="entry">
+      <div class="erow"><h3 class="role">Founding Designer</h3><span class="when">Jun 2024 &ndash; Jan 2025</span></div>
+      <div class="org">Tutor Me, Techstars 2024</div>
+      <ul class="bul">
+        <li>Contributed to approximately 5K new TikTok and 3K Instagram followers in two months while owning product design.</li>
+        <li>Designed AI-guided onboarding and tutorials, applying customer research to early user friction and activation.</li>
+        <li>Led design from discovery to launch; aligned founders and engineering on priorities and built a shared design system.</li>
+      </ul>
+    </div>
+    <div class="entry">
+      <div class="erow"><h3 class="role">Product Designer</h3><span class="when">Jan 2021 &ndash; Jun 2023</span></div>
+      <div class="org">Cotiviti</div>
+      <ul class="bul">
+        <li>Translated market research and stakeholder needs into healthcare payments product requirements and business opportunities.</li>
+        <li>Designed policy workflows projected to reduce onboarding costs 20%, maintenance costs 30%, and adoption time 35%.</li>
+        <li>Built accessible product patterns with product, engineering, and compliance teams to standardize healthcare experiences.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="rs">
+    <div class="rsh"><h2>Skills</h2><span class="line"></span></div>
+    <div class="sk-grid">
+      <div class="sk-row"><span class="sk-label">GTM &amp; Marketing</span><div class="chips"><span class="chip">Customer research</span><span class="chip">Audience segmentation</span><span class="chip">Positioning and messaging</span><span class="chip">Offer development</span><span class="chip">Launch planning</span><span class="chip">Partnership development</span></div></div>
+      <div class="sk-row"><span class="sk-label">Growth &amp; Lifecycle</span><div class="chips"><span class="chip">Funnel analysis</span><span class="chip">Landing page optimization</span><span class="chip">Email campaigns</span><span class="chip">Onboarding and activation</span><span class="chip">Renewal strategy</span></div></div>
+      <div class="sk-row"><span class="sk-label">Strategy &amp; Execution</span><div class="chips"><span class="chip">Product strategy</span><span class="chip">UX research</span><span class="chip">CRM workflows</span><span class="chip">KPI tracking</span><span class="chip">Process improvement</span><span class="chip">Cross-functional PM</span></div></div>
+      <div class="sk-row"><span class="sk-label">Tools</span><div class="chips"><span class="chip">Circle</span><span class="chip">Stripe</span><span class="chip">Excel</span><span class="chip">Google Sheets</span><span class="chip">Claude Code</span><span class="chip">OpenClaw</span></div></div>
+    </div>
+  </section>
+
+  <section class="rs">
+    <div class="rsh"><h2>Education</h2><span class="line"></span></div>
+    <div class="entry">
+      <h3 class="role">Bachelor of Science</h3>
+      <div class="org">University of Pittsburgh</div>
+    </div>
+  </section>
+
+  <div class="foot"><a href="index.html">&larr; Back to work</a><a href="https://www.linkedin.com/in/sophialu520/" target="_blank">linkedin.com/in/sophialu520</a></div>
+</div>
+</body>
+</html>
