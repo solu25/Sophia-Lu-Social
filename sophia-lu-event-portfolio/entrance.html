@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>The door — Sophia Lu</title>
+  <meta name="description" content="Sophia Lu — GTM strategy, growth marketing and product. A portfolio you walk through like an evening event.">
+  <meta name="dc-fit" content="contain 1440 900">
+  <style>html.dc-loading body{visibility:hidden} x-dc{display:contents} helmet{display:none}</style>
+  <script>
+    document.documentElement.classList.add('dc-loading');
+    if (window.matchMedia('(max-width: 800px)').matches) location.replace('m/entrance.html' + location.hash);
+  </script>
+  <script src="assets/js/dc-lite.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&amp;display=swap">
+  <style>
+    body { margin: 0; background: #f4efe4; font-family: "Hanken Grotesk", ui-sans-serif, system-ui, sans-serif; color: #1f2433; }
+    a { color: #26314a; } a:hover { color: #9a4e33; }
+    .scene button { font: inherit; cursor: pointer; color: inherit; }
+    .scene button:focus-visible, .scene a:focus-visible { outline: 2px solid #26314a; outline-offset: 4px; }
+
+    .world { position: absolute; left: 0; top: 0; width: 1440px; height: 900px; transform-origin: 720px 400px; transition: transform 650ms cubic-bezier(0.55, 0, 0.45, 1); }
+    .p2 .world, .p3 .world { transform: scale(2.6); }
+
+    .door-btn { position: absolute; padding: 0; margin: 0; border: 0; background: transparent; border-radius: 161px 161px 2px 2px; perspective: 1200px; }
+    .interior { position: absolute; inset: 0; border-radius: 161px 161px 0 0; overflow: hidden; background: #efe3d0; }
+    .interior img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 62% 50%; }
+    .leaf { position: absolute; top: 0; width: calc(50% + 1px); height: 100%; transition: transform 550ms cubic-bezier(0.4, 0, 0.2, 1); }
+    .leaf img { display: block; width: 100%; height: 100%; }
+    .leaf-l { left: 0; transform-origin: 0 50%; }
+    .leaf-r { right: 0; transform-origin: 100% 50%; }
+    .p0 .leaf-l { animation: nudge-l 6s ease-in-out 2s infinite; }
+    .p0 .leaf-r { animation: nudge-r 6s ease-in-out 2s infinite; }
+    @keyframes nudge-l { 0%, 86%, 100% { transform: rotateY(0deg); } 92% { transform: rotateY(-8deg); } }
+    @keyframes nudge-r { 0%, 86%, 100% { transform: rotateY(0deg); } 92% { transform: rotateY(8deg); } }
+    .scene:has(.door-btn:hover) .leaf, .scene:has(.hint:hover) .leaf, .door-btn:focus-visible .leaf { animation: none; }
+    .scene:has(.door-btn:hover) .leaf-l, .scene:has(.hint:hover) .leaf-l, .door-btn:focus-visible .leaf-l { transform: rotateY(-22deg); }
+    .scene:has(.door-btn:hover) .leaf-r, .scene:has(.hint:hover) .leaf-r, .door-btn:focus-visible .leaf-r { transform: rotateY(22deg); }
+    .p1 .world .leaf-l, .p2 .world .leaf-l, .p3 .world .leaf-l { animation: none; transform: rotateY(-84deg); }
+    .p1 .world .leaf-r, .p2 .world .leaf-r, .p3 .world .leaf-r { animation: none; transform: rotateY(84deg); }
+    .p1 .door-btn, .p2 .door-btn, .p3 .door-btn { pointer-events: none; }
+
+    .spill { position: absolute; pointer-events: none; background: radial-gradient(ellipse 50% 60% at 50% 0%, rgba(255, 214, 160, 0.7) 0%, rgba(255, 214, 160, 0) 100%); opacity: 0; transition: opacity 300ms ease; }
+    .scene:has(.door-btn:hover) .spill, .scene:has(.hint:hover) .spill { opacity: 0.5; }
+    .p1 .spill, .p2 .spill, .p3 .spill { opacity: 1; }
+
+    .hint { display: flex; align-items: center; gap: 12px; min-height: 52px; padding: 0 24px; border-radius: 8px; border: 1px solid #26314a; background: #f7f2e8; color: #1f2433; font-size: 16px; box-shadow: 0 4px 16px rgba(38, 49, 74, 0.10); transition: background 200ms ease; }
+    .hint:hover { background: #efe6d6; }
+    .hint .dot { display: block; width: 8px; height: 8px; border-radius: 999px; background: #b8654a; animation: pulse 1.8s ease-in-out infinite; }
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+    .outside-ui { transition: opacity 200ms ease; }
+    .p1 .outside-ui, .p2 .outside-ui, .p3 .outside-ui { opacity: 0; pointer-events: none; }
+
+    .lobby { position: absolute; inset: 0; overflow: hidden; opacity: 0; visibility: hidden; transition: opacity 400ms ease, visibility 0s 700ms; }
+    .lobby img { position: absolute; left: 0; top: -30px; width: 1440px; height: 960px; display: block; transform: scale(1.12); transition: transform 700ms cubic-bezier(0.22, 1, 0.36, 1); }
+    .p2 .lobby, .p3 .lobby { opacity: 1; visibility: visible; transition: opacity 400ms ease 200ms, visibility 0s 0s; }
+    .p2 .lobby img, .p3 .lobby img { transform: none; }
+    .lobby-ui { opacity: 0; transform: translateY(12px); transition: opacity 400ms ease, transform 400ms cubic-bezier(0.22, 1, 0.36, 1); pointer-events: none; }
+    .p3 .lobby-ui { opacity: 1; transform: none; pointer-events: auto; transition-delay: 1200ms; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .scene *, .scene { animation: none !important; transition-duration: 1ms !important; transition-delay: 0s !important; }
+    }
+  </style>
+</helmet>
+<div class="scene {{sceneClass}}" style="position: relative; width: 1440px; height: 900px; overflow: hidden; background: #f4efe4;">
+
+  <div class="world">
+    <img src="assets/img/9c8c735c0246ac30df55294cdd19de7f.webp" alt="An arched navy double door in a pale stone wall, with a brass lantern and a planter on each side of the step" style="position: absolute; left: 0; top: 0; width: 1440px; height: 900px; display: block;">
+
+    <div class="spill" style="left: 540px; top: 716px; width: 361px; height: 60px;"></div>
+
+    <button class="door-btn" onClick="{{stepIn}}" aria-label="Click on the door to go in" style="left: 560px; top: 85.3px; width: 321px; height: 633px;">
+      <span class="interior"><img src="assets/img/26e3c28573ff0f1afb3855294cb49b30.webp" alt=""></span>
+      <span class="leaf leaf-l"><img src="assets/img/8403f503622b126ce1c2a2a15db840c4.webp" alt=""></span>
+      <span class="leaf leaf-r"><img src="assets/img/aa148cb3409d559a120cb165ee550113.webp" alt=""></span>
+    </button>
+  </div>
+
+  <div class="outside-ui" style="position: absolute; left: 0; top: 806px; width: 1440px; display: flex; justify-content: center;">
+    <button class="hint" onClick="{{stepIn}}"><span class="dot"></span>Click on the door to go in</button>
+  </div>
+
+  <a class="outside-ui" href="index.html" style="position: absolute; left: 48px; top: 28px; font-size: 14px; line-height: 44px;">← Back to the invitation</a>
+
+  <div class="lobby">
+    <img src="assets/img/26e3c28573ff0f1afb3855294cb49b30.webp" alt="The lobby: guests talking on a pink sofa and at high-top tables under a paper lantern, with abstract art on cream walls">
+    <div class="lobby-ui" style="position: absolute; left: 0; top: 806px; width: 1440px; display: flex; justify-content: center;">
+      <a class="go-lobby" href="lobby.html" style="display: inline-flex; align-items: center; gap: 12px; min-height: 52px; padding: 0 24px; border-radius: 8px; border: 1px solid #26314a; background: #f7f2e8; color: #1f2433; font-size: 16px; text-decoration: none; box-shadow: 0 4px 16px rgba(38, 49, 74, 0.12);">Continue to the lobby <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;preview&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;closed&quot;,&quot;open&quot;,&quot;inside&quot;],&quot;default&quot;:&quot;closed&quot;},&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:900}}">
+class Component extends DCLogic {
+  startPhase() {
+    const p = this.props.preview;
+    return p === 'open' ? 1 : p === 'inside' ? 3 : 0;
+  }
+  clearTimers() { (this.timers || []).forEach((t) => clearTimeout(t)); this.timers = []; }
+  componentDidUpdate(prev) {
+    if (prev.preview !== this.props.preview) { this.clearTimers(); this.setState({ phase: this.startPhase() }); }
+  }
+  componentWillUnmount() { this.clearTimers(); }
+  enterLobby() {
+    const link = document.querySelector('.scene .go-lobby');
+    if (link) link.click();
+  }
+  renderVals() {
+    const s = this.state || {};
+    const phase = s.phase != null ? s.phase : this.startPhase();
+    return {
+      sceneClass: 'p' + phase,
+      stepIn: () => {
+        if (phase !== 0) return;
+        this.enterLobby();
+      },
+    };
+  }
+}
+</script>
+</body>
+</html>

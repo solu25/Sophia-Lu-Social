@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>MegPrime Pay — Sophia Lu</title>
   <meta name="description" content="Sophia Lu — GTM strategy, growth marketing and product. A portfolio you walk through like an evening event.">
-  <meta name="dc-fit" content="zoom 1440">
+  
   <style>html.dc-loading body{visibility:hidden} x-dc{display:contents} helmet{display:none}</style>
   <script>
     document.documentElement.classList.add('dc-loading');
-    if (window.matchMedia('(max-width: 800px)').matches) location.replace('m/megprimepay.html' + location.hash);
+    if (window.matchMedia('(min-width: 801px)').matches) location.replace('../megprimepay.html' + location.hash);
   </script>
-  <script src="assets/js/dc-lite.js"></script>
+  <script src="../assets/js/dc-lite.js"></script>
 </head>
 <body>
 <x-dc>
@@ -171,40 +171,86 @@
     .rise { opacity: 1; animation: none; }
     @keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
     @media (prefers-reduced-motion: reduce) { .pg *, .pg { animation: none !important; transition-duration: 1ms !important; } .rise { opacity: 1; animation: none; } }
-    @media (max-width: 800px) {
-      .pg { min-width: 0 !important; }
-      .side, .agenda { display: none !important; }
-      .top { padding: 0 16px; height: 56px; }
-      .wrap { width: auto; margin: 0; padding: 0 16px; box-sizing: border-box; }
-      .hero { grid-template-columns: 1fr; padding: 40px 0 48px; column-gap: 0; }
-      .sec { padding: 56px 0 0; }
-      .sec + .sec { margin-top: 56px; }
-      .col2 { grid-template-columns: 1fr; column-gap: 0; row-gap: 32px; }
-      .grid3 { grid-template-columns: 1fr; }
-      .grid4 { grid-template-columns: 1fr 1fr; gap: 10px; }
-      .grid5 { grid-template-columns: 1fr 1fr; }
-      .grid2s { grid-template-columns: 1fr; gap: 10px; }
-      .endrow { grid-template-columns: 1fr; }
-      .h2 { font-size: 28px; line-height: 1.1; max-width: 100%; }
-      .lead { font-size: 17px; line-height: 26px; }
-      .body { font-size: 16px; line-height: 25px; max-width: 100%; }
-      .quote { font-size: 24px; line-height: 32px; }
-      .quote::before { font-size: 56px; line-height: 36px; }
-      .big2 { font-size: 32px; line-height: 40px; margin-top: 40px; }
-      .shift { grid-template-columns: 1fr; }
-      .arrowbig { font-size: 24px; }
-      .endcard { padding: 20px; }
-      .journey { grid-template-columns: repeat(3, 1fr); row-gap: 48px; }
-      .journey::before { display: none; }
-      .jstage .jd { width: 260px; margin-left: -130px; }
-      .meta { grid-template-columns: 1fr; }
-      .fixes { grid-template-columns: 1fr; }
-      .paths { grid-template-columns: 1fr; }
-      .concepts { grid-template-columns: 1fr; }
-    }
+
+    /* ---------- Mobile artboard (390px) ---------- */
+    .side, .agenda { display: none !important; }
+    [data-ch] { scroll-margin-top: 68px; }
+    .top { height: 56px; padding: 0 16px; }
+    .top > a { flex-direction: column; align-items: flex-start !important; gap: 2px !important; }
+    .top > a .serif { font-size: 21px !important; line-height: 22px !important; }
+    .top > a .mono { font-size: 8.5px !important; line-height: 12px; }
+    .top, .top * { white-space: nowrap; }
+    .top nav { gap: 10px !important; }
+    .toplink { font-size: 12.5px; }
+    .cta { min-height: 36px; padding: 0 10px; font-size: 13px; gap: 0; box-shadow: 0 2px 0 #26314a; }
+    .cta .ar { display: none; }
+    .wrap { width: auto; margin: 0; padding: 0 16px; box-sizing: border-box; }
+    .hero { grid-template-columns: 1fr; column-gap: 0; row-gap: 32px; padding: 32px 0 40px; }
+    .hero h1 { font-size: 34px !important; line-height: 1.06 !important; }
+    .seat { display: inline-block; }
+    .stat .num { font-size: 32px; line-height: 36px; }
+    .sec { padding: 48px 0 0; }
+    .sec + .sec { margin-top: 48px; }
+    .h2 { font-size: 30px; line-height: 1.08; max-width: 100%; }
+    .lead { font-size: 17px; line-height: 26px; max-width: 100%; }
+    .body { font-size: 16px; line-height: 25px; max-width: 100% !important; }
+    .small { font-size: 14.5px; line-height: 22px; }
+    .col2 { grid-template-columns: 1fr; column-gap: 0; row-gap: 24px; }
+    .grid3 { grid-template-columns: 1fr; gap: 14px; }
+    .grid4 { grid-template-columns: 1fr; gap: 12px; }
+    .grid5 { grid-template-columns: 1fr 1fr; row-gap: 4px; }
+    .grid2s { grid-template-columns: 1fr !important; gap: 12px !important; }
+    .fixes { grid-template-columns: 1fr !important; }
+    [style*="repeat(4, minmax(0, 1fr))"] { grid-template-columns: 1fr 1fr !important; row-gap: 6px; }
+    [style*="repeat(2, minmax(0, 1fr))"] { column-gap: 14px !important; }
+    .card { padding: 18px 18px 20px; }
+    .qs li { font-size: 17px; line-height: 25px; grid-template-columns: 36px 1fr; }
+    .callout { padding: 18px 20px; font-size: 17px; line-height: 26px; }
+    .quote { margin: 32px 0 28px; font-size: 26px; line-height: 33px; }
+    .quote::before { font-size: 56px; line-height: 36px; }
+    .big2 { font-size: 30px; line-height: 37px; margin-top: 36px; }
+    .shift { grid-template-columns: 1fr; row-gap: 8px; }
+    .shift .from, .shift .to { padding: 18px; }
+    .shift .serif { font-size: 24px !important; line-height: 30px !important; }
+    .arrowbig { font-size: 24px; transform: rotate(90deg); }
+    .big .serif { font-size: 60px !important; line-height: 62px !important; }
+    .frow .fl .serif { font-size: 30px !important; }
+    .chain { gap: 8px; }
+    .chain .link { font-size: 15px; padding: 8px 13px; }
+    .tbl td { font-size: 14px; line-height: 20px; }
+    .reachrow { grid-template-columns: 1fr; row-gap: 20px; }
+    .deckstrip figure { flex: 0 0 300px; }
+    .endrow { grid-template-columns: 1fr !important; gap: 14px; }
+    .endcard { padding: 20px; }
+    .endcard .serif { font-size: 26px !important; line-height: 30px !important; }
+    .meta { grid-template-columns: 1fr; row-gap: 2px; }
+    .meta span:not(.mono) { margin-bottom: 8px; }
+    .paths, .concepts, .probs { grid-template-columns: 1fr; gap: 14px; }
+    .serif[style*="font-size: 32px; line-height: 38px"] { font-size: 26px !important; line-height: 31px !important; }
+    .res-row { grid-template-columns: 1fr !important; gap: 24px; }
+    /* Journey: hover tooltips become always-visible cards on touch */
+    .jlegend { display: none; }
+    .journey, .journey.five { grid-template-columns: 1fr; gap: 14px; }
+    .journey::before { display: none; }
+    .jstage { display: grid; grid-template-columns: 54px 1fr; column-gap: 14px; row-gap: 8px; align-items: center; text-align: left; padding: 0; }
+    .jstage .jd { grid-column: 1 / -1; position: static; width: auto; margin: 0; opacity: 1; visibility: visible; transform: none; box-shadow: none; }
+    .journey + .col2 { margin-top: 32px !important; }
+    /* TutorMe stage funnel + diagrams */
+    .funnel { flex-direction: column; }
+    .funnel .fs { border-right: 1.5px solid #26314a; border-bottom: 0; }
+    .funnel .fs:last-child { border-bottom: 1.5px solid #26314a; }
+    .dg { padding: 20px 18px; }
+    .dg-row { flex-direction: column; align-items: stretch; }
+    .dg-ar { transform: rotate(90deg); }
+    .dg-end { max-width: none; text-align: center; }
+    .dg-lane { grid-template-columns: 1fr; row-gap: 10px; }
+    .dg-specl { grid-template-columns: 1fr; row-gap: 12px; }
+    .dg-specl > div { text-align: left !important; }
+    .dg-sys { flex-direction: column; }
+    .dg-fun { grid-template-columns: 1fr; row-gap: 20px; }
   </style>
 </helmet>
-<div class="pg" onScroll="{{onScroll}}" style="position: relative; width: 100%; height: 100vh; overflow-y: auto; scroll-behavior: smooth; min-width: 1440px; background: #f4efe4;">
+<div class="pg" style="position: relative; width: 100%; height: 100vh; overflow-y: auto; overflow-x: hidden; scroll-behavior: smooth; min-width: 320px; background: #f4efe4;">
 
   <header class="top">
     <a href="lobby.html" style="display: flex; align-items: baseline; gap: 12px; text-decoration: none; color: #1f2433;">
@@ -213,28 +259,16 @@
     </a>
     <nav aria-label="Profile links" style="display: flex; align-items: center; gap: 28px;">
       <a class="toplink" href="https://www.linkedin.com/in/sophialu520/">LinkedIn ↗</a>
-      <a class="toplink" href="resume.html">Résumé</a>
+      <a class="toplink" href="../resume.html">Résumé</a>
       <a class="cta" href="#">Let’s talk<span class="ar" aria-hidden="true">→</span></a>
     </nav>
   </header>
-
-  <nav class="agenda {{agendaCls}}" aria-label="Tonight’s agenda">
-    <span class="mono" style="font-size: 9px; line-height: 14px; color: #5b5a57; margin-bottom: 10px;">Tonight’s agenda</span>
-    <button type="button" class="ai {{agenda.a0}}" onClick="{{go.g0}}"><span class="dot"></span><span class="no mono">00</span><span class="nm">The product</span></button>
-    <button type="button" class="ai {{agenda.a1}}" onClick="{{go.g1}}"><span class="dot"></span><span class="no mono">01</span><span class="nm">The design problem</span></button>
-    <button type="button" class="ai {{agenda.a2}}" onClick="{{go.g2}}"><span class="dot"></span><span class="no mono">02</span><span class="nm">The foundation</span></button>
-    <button type="button" class="ai {{agenda.a3}}" onClick="{{go.g3}}"><span class="dot"></span><span class="no mono">03</span><span class="nm">Six principles</span></button>
-    <button type="button" class="ai {{agenda.a4}}" onClick="{{go.g4}}"><span class="dot"></span><span class="no mono">04</span><span class="nm">Competitor research</span></button>
-    <button type="button" class="ai {{agenda.a5}}" onClick="{{go.g5}}"><span class="dot"></span><span class="no mono">05</span><span class="nm">The screens</span></button>
-    <button type="button" class="ai {{agenda.a6}}" onClick="{{go.g6}}"><span class="dot"></span><span class="no mono">06</span><span class="nm">Outcome</span></button>
-    <button type="button" class="ai {{agenda.a7}}" onClick="{{go.g7}}"><span class="dot"></span><span class="no mono">07</span><span class="nm">What I learned</span></button>
-  </nav>
 
   <div class="wrap">
     <div class="hero" data-hero="1">
       <div style="display: flex; flex-direction: column;">
         <div class="mono rise" style="font-size: 11px; line-height: 16px; color: #9a4e33; animation-delay: 100ms;">Floor 03 · Private roundtable · MegPrime Pay</div>
-        <h1 class="serif rise" style="margin: 14px 0 0; font-size: 42px; line-height: 1.04; letter-spacing: -0.01em; animation-delay: 200ms;">How do you make paying rent<br>with crypto feel like<br>an ordinary day?</h1>
+        <h1 class="serif rise" style="margin: 14px 0 0; font-size: 42px; line-height: 1.04; letter-spacing: -0.01em; animation-delay: 200ms;">How do you make paying rent with crypto feel like an ordinary day?</h1>
         <p class="rise" style="margin: 16px 0 0; font-size: 18px; line-height: 27px; color: #2f3340; animation-delay: 280ms;">Designing an onboarding and bill pay journey when part of rent setup happens outside the app.</p>
         <div class="chips rise" style="margin-top: 18px; animation-delay: 320ms;"><span class="chip">Product design</span><span class="chip">Onboarding</span><span class="chip">Payments</span><span class="chip">Design system</span></div>
         <div class="meta rise" style="animation-delay: 380ms;">
@@ -244,7 +278,7 @@
           <span class="mono">Tools</span><span>Pencil, Figma, Claude Code, Claude</span>
           <span class="mono">Status</span><span>Designed and handed off. The contract ended before launch, so there are no customer results.</span>
         </div>
-        <button type="button" class="rise seat" onClick="{{go.g0}}" style="margin-top: 24px; align-self: flex-start; animation-delay: 600ms;">Take your seat ↓</button>
+        <a class="rise seat" href="#ch00" style="margin-top: 24px; align-self: flex-start; animation-delay: 600ms;">Take your seat ↓</a>
       </div>
       <div class="rise" style="animation-delay: 300ms;">
         <div class="frame"><svg viewBox="0 0 610 460" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect x="0" y="0" width="610" height="380" fill="#f7f1e6"></rect><rect x="0" y="380" width="610" height="80" fill="#e9dfcc"></rect><line x1="0" y1="380" x2="610" y2="380" stroke="#26314a" stroke-width="1.5"></line><line x1="0" y1="0" x2="0" y2="460" stroke="#26314a" stroke-width="1.5"></line><line x1="610" y1="0" x2="610" y2="460" stroke="#26314a" stroke-width="1.5"></line><line x1="305" y1="0" x2="305" y2="18" stroke="#26314a" stroke-width="1"></line><circle cx="305" cy="26" r="9" fill="#f2cc8f" stroke="#26314a" stroke-width="1"></circle><rect x="40" y="50" width="150" height="100" rx="6" fill="#fbf7ef" stroke="#26314a" stroke-width="1.2"></rect><rect x="56" y="70" width="70" height="8" fill="#ddd0bb"></rect><rect x="56" y="88" width="118" height="26" rx="4" fill="#eee5d5"></rect><rect x="56" y="122" width="48" height="14" rx="7" fill="#e9cf9f"></rect><rect x="420" y="50" width="150" height="100" rx="6" fill="#fbf7ef" stroke="#26314a" stroke-width="1.2"></rect><rect x="436" y="70" width="90" height="8" fill="#ddd0bb"></rect><rect x="436" y="88" width="118" height="8" fill="#eee5d5"></rect><rect x="436" y="104" width="100" height="8" fill="#eee5d5"></rect><circle cx="170" cy="247" r="10" fill="#c9b8a0" stroke="#26314a" stroke-width="1.5"></circle><rect x="159" y="260" width="22" height="70" rx="10" fill="#c9b8a0" stroke="#26314a" stroke-width="1.5"></rect><circle cx="260" cy="235" r="10" fill="#d8c6ad" stroke="#26314a" stroke-width="1.5"></circle><rect x="249" y="248" width="22" height="70" rx="10" fill="#d8c6ad" stroke="#26314a" stroke-width="1.5"></rect><circle cx="350" cy="235" r="10" fill="#e4d6c1" stroke="#26314a" stroke-width="1.5"></circle><rect x="339" y="248" width="22" height="70" rx="10" fill="#e4d6c1" stroke="#26314a" stroke-width="1.5"></rect><circle cx="440" cy="247" r="10" fill="#c9b8a0" stroke="#26314a" stroke-width="1.5"></circle><rect x="429" y="260" width="22" height="70" rx="10" fill="#c9b8a0" stroke="#26314a" stroke-width="1.5"></rect><ellipse cx="305" cy="350" rx="230" ry="56" fill="#d9c3a5" stroke="#26314a" stroke-width="1.5"></ellipse><rect x="250" y="332" width="50" height="32" fill="#fbf7ef" stroke="#26314a" stroke-width="1" transform="rotate(-6 275 348)"></rect><rect x="320" y="334" width="44" height="28" fill="#fffaf2" stroke="#26314a" stroke-width="1" transform="rotate(5 342 348)"></rect><line x1="305" y1="35" x2="305" y2="190" stroke="#26314a" stroke-width="1.2"></line><path d="M278 214 L332 214 L322 190 L288 190 Z" fill="#f2cc8f" stroke="#26314a" stroke-width="1.2"></path><ellipse cx="305" cy="232" rx="60" ry="14" fill="#f2cc8f" opacity="0.25"></ellipse><rect x="214" y="128" width="182" height="6" fill="#d9c3a5" stroke="#26314a" stroke-width="1.2"></rect><rect x="282" y="94" width="46" height="34" rx="3" fill="#3d4a6b" stroke="#26314a" stroke-width="1.2"></rect><circle cx="305" cy="111" r="7" fill="none" stroke="#f2cc8f" stroke-width="1.5"></circle><line x1="305" y1="111" x2="310" y2="107" stroke="#f2cc8f" stroke-width="1.5"></line><rect x="232" y="104" width="12" height="24" fill="#e9cf9f" stroke="#26314a" stroke-width="1.2"></rect><rect x="246" y="108" width="10" height="20" fill="#7c8b6f" stroke="#26314a" stroke-width="1.2"></rect><path d="M117 352 L128 338 L139 352 Z" fill="#fbf7ef" stroke="#26314a" stroke-width="1.2"></path><path d="M459 352 L470 338 L481 352 Z" fill="#fbf7ef" stroke="#26314a" stroke-width="1.2"></path><path d="M195 392 L206 378 L217 392 Z" fill="#fbf7ef" stroke="#26314a" stroke-width="1.2"></path><path d="M381 392 L392 378 L403 392 Z" fill="#fbf7ef" stroke="#26314a" stroke-width="1.2"></path></svg></div>
@@ -269,7 +303,7 @@
       </div>
     </div>
     <p class="body">The team was racing toward a super-MVP launch. Everything had to support shipping fast, not perfectly.</p>
-    <div style="margin-top: 36px;"><figure class="shot"><img src="assets/img/f4dd40b28e0e08accb9246473c14080d.jpg" alt="About MegPrime Pay, the product overview page" loading="lazy"></figure><p class="shotcap">The product overview page that introduces the rewards program to a first-time visitor.</p></div>
+    <div style="margin-top: 36px;"><figure class="shot"><img src="../assets/img/f4dd40b28e0e08accb9246473c14080d.jpg" alt="About MegPrime Pay, the product overview page" loading="lazy"></figure><p class="shotcap">The product overview page that introduces the rewards program to a first-time visitor.</p></div>
   </section>
   <section class="sec" id="ch01" data-ch="1">
     <div class="mono" style="font-size: 11px; line-height: 16px; color: #9a4e33;">01 · The design problem</div>
@@ -280,7 +314,7 @@
         <p class="body">MegPrime is different because money moves through more steps before it reaches the landlord. Each of those steps is a place a user might pause, get nervous, or back out.</p>
         <p class="body">The user we were designing for is not a crypto enthusiast looking for a new toy. She is a renter or homeowner who saw a 10 percent reward and immediately thought:</p>
       </div>
-      <div><figure class="shot"><img src="assets/img/a11d3cafedd32d45c3064cd1e9c57008.jpg" alt="Current MegPrime Offers, the reward structure" loading="lazy"></figure><p class="shotcap">2% on standard rent, up to 20% at partner properties, mortgage rebates and home-purchase rewards. The same screen that draws her in is the one that makes her ask what the catch is.</p></div>
+      <div><figure class="shot"><img src="../assets/img/a11d3cafedd32d45c3064cd1e9c57008.jpg" alt="Current MegPrime Offers, the reward structure" loading="lazy"></figure><p class="shotcap">2% on standard rent, up to 20% at partner properties, mortgage rebates and home-purchase rewards. The same screen that draws her in is the one that makes her ask what the catch is.</p></div>
     </div>
     <blockquote class="quote serif">This sounds too good to be true. What’s the catch?</blockquote>
     <div class="callout"><p>How do you onboard a skeptical user into a brand new payment model, at MVP speed, without making her learn anything complicated before she sees the value?</p></div>
@@ -300,7 +334,7 @@
         <div class="mono" style="font-size: 10px; color: #5b5a57; margin-bottom: 12px;">The primary persona</div>
         <p class="body" style="margin-top: 0;">The Value Optimizer. When she sees a 10 percent cashback offer on her rent, her first thought is suspicion.</p>
       </div>
-      <div><figure class="shot"><img src="assets/img/871c500caeb80bacf44f9dfcb256b93a.jpg" alt="The Value Optimizer, primary persona block" loading="lazy"></figure><p class="shotcap">“Who We’re Building For” — the persona designed to receive 100 percent of design attention.</p></div>
+      <div><figure class="shot"><img src="../assets/img/871c500caeb80bacf44f9dfcb256b93a.jpg" alt="The Value Optimizer, primary persona block" loading="lazy"></figure><p class="shotcap">“Who We’re Building For” — the persona designed to receive 100 percent of design attention.</p></div>
     </div>
     <div class="mono" style="font-size: 10px; color: #5b5a57; margin-top: 48px;">Two Jobs to be Done</div>
     <p class="body" style="margin-top: 8px;">Users hire the product to do a job. Understand the job, not just the feature request.</p>
@@ -311,8 +345,8 @@
     <div class="chain" style="margin-top: 20px;">
       <span class="link">Awareness · trust signals</span><span class="ar2">→</span><span class="link">Consideration · proof</span><span class="ar2">→</span><span class="link">First use · control</span><span class="ar2">→</span><span class="link">Validation · confirmation</span><span class="ar2">→</span><span class="link">Habit · reinforcement</span>
     </div>
-    <div style="margin-top: 32px;"><figure class="shot"><img src="assets/img/7225d45583b91157ba4b327cf960d843.jpg" alt="End-to-end core user journey, five emotional states from Awareness to Habit" loading="lazy"></figure><p class="shotcap">Five emotional states from Awareness to Habit, each with its own design needs.</p></div>
-    <div style="margin-top: 28px;"><figure class="shot"><img src="assets/img/b6ca2f05d532cee4b0f7d2700272931d.jpg" alt="Bill Pay Rewards user journey, a four-phase research artifact" loading="lazy"></figure><p class="shotcap">The deeper four-phase artifact: Discovery, Consideration, Activation, Retention, with user quotes and success metrics per phase.</p></div>
+    <div style="margin-top: 32px;"><figure class="shot"><img src="../assets/img/7225d45583b91157ba4b327cf960d843.jpg" alt="End-to-end core user journey, five emotional states from Awareness to Habit" loading="lazy"></figure><p class="shotcap">Five emotional states from Awareness to Habit, each with its own design needs.</p></div>
+    <div style="margin-top: 28px;"><figure class="shot"><img src="../assets/img/b6ca2f05d532cee4b0f7d2700272931d.jpg" alt="Bill Pay Rewards user journey, a four-phase research artifact" loading="lazy"></figure><p class="shotcap">The deeper four-phase artifact: Discovery, Consideration, Activation, Retention, with user quotes and success metrics per phase.</p></div>
     <p class="small" style="margin-top: 32px; color: #5b5a57;">The last section of the foundation was a list of what I did not know: research gaps, technical unknowns, business model risks, team alignment risks.</p>
   </section>
   <section class="sec" id="ch03" data-ch="3">
@@ -338,7 +372,7 @@
     </div>
     <div class="mono" style="font-size: 10px; color: #5b5a57; margin-top: 40px;">That timing gap drove three design responses</div>
     <ul class="list num" style="margin-top: 10px; max-width: 760px;"><li>A funding deadline.</li><li>An “always target next month” rule.</li><li>A safety net: the old payment method stays active until MegPrime is fully funded.</li></ul>
-    <div style="margin-top: 36px;"><figure class="shot"><img src="assets/img/358a9a2d0b87c9faa769fe821354351d.jpg" alt="Bilt UX competitor research, three rent payment paths mapped at user-facing and backend levels" loading="lazy"></figure><p class="shotcap">Three BillPay paths mapped at both the user-facing and backend levels. The virtual-account pattern was borrowable; the instant settlement was not.</p></div>
+    <div style="margin-top: 36px;"><figure class="shot"><img src="../assets/img/358a9a2d0b87c9faa769fe821354351d.jpg" alt="Bilt UX competitor research, three rent payment paths mapped at user-facing and backend levels" loading="lazy"></figure><p class="shotcap">Three BillPay paths mapped at both the user-facing and backend levels. The virtual-account pattern was borrowable; the instant settlement was not.</p></div>
   </section>
   <section class="sec" id="ch05" data-ch="5">
     <div class="mono" style="font-size: 11px; line-height: 16px; color: #9a4e33;">05 · The screens</div>
@@ -353,7 +387,7 @@
           <div class="card soft"><div class="mono" style="font-size: 9px; color: #9a4e33;">Principle · Optimize for the Second Payment</div><p class="small" style="margin-top: 8px;">The calculator turns an abstract promise into a personal number before any commitment. Leading with her own reward number is the cheapest possible first trust deposit.</p></div>
         </div>
       </div>
-      <div style="margin-top: 28px;"><figure class="shot"><img src="assets/img/0959132e46d132e0e56a9d094017fbc3.jpg" alt="Value Prop to Calculate Rewards onboarding screens" loading="lazy"></figure><p class="shotcap">The flow opens with the reward, not the sign-up. Property type sets eligibility up front, and the calculator turns an abstract promise into a personal one.</p></div>
+      <div style="margin-top: 28px;"><figure class="shot"><img src="../assets/img/0959132e46d132e0e56a9d094017fbc3.jpg" alt="Value Prop to Calculate Rewards onboarding screens" loading="lazy"></figure><p class="shotcap">The flow opens with the reward, not the sign-up. Property type sets eligibility up front, and the calculator turns an abstract promise into a personal one.</p></div>
     </div>
     <div style="margin-top: 56px; padding-top: 36px; border-top: 1px solid #ddd0bb;">
       <div class="mono" style="font-size: 10px; color: #5b5a57;">2</div>
@@ -364,7 +398,7 @@
           <div class="card soft"><div class="mono" style="font-size: 9px; color: #9a4e33;">Principle · Familiar Beats Novel</div><p class="small" style="margin-top: 8px;">I mapped the decision space before designing the screens. She does not see the matrix. She sees a three-step add-a-bill flow. The complexity lives in the logic underneath.</p></div>
         </div>
       </div>
-      <div style="margin-top: 28px;"><figure class="shot"><img src="assets/img/e9c241a6f97eea48595d88199a99ec82.jpg" alt="Gather Bill Data, the add-a-bill flow screens" loading="lazy"></figure><p class="shotcap">The decision matrix mapping how users actually pay their bills today, and the simple add-a-bill flow that came out of it.</p></div>
+      <div style="margin-top: 28px;"><figure class="shot"><img src="../assets/img/e9c241a6f97eea48595d88199a99ec82.jpg" alt="Gather Bill Data, the add-a-bill flow screens" loading="lazy"></figure><p class="shotcap">The decision matrix mapping how users actually pay their bills today, and the simple add-a-bill flow that came out of it.</p></div>
     </div>
     <div style="margin-top: 56px; padding-top: 36px; border-top: 1px solid #ddd0bb;">
       <div class="mono" style="font-size: 10px; color: #5b5a57;">3.1</div>
@@ -375,7 +409,7 @@
           <div class="card soft"><div class="mono" style="font-size: 9px; color: #9a4e33;">Principle · Clarity Over Surprise</div><p class="small" style="margin-top: 8px;">Every detail is shown back to her, including the full fee structure (swap fee, conversion fee, who pays what) and the reward projection. Hidden fees are what made her suspicious in the first place. Visible fees are how she stops being suspicious.</p></div>
         </div>
       </div>
-      <div style="margin-top: 28px;"><figure class="shot"><img src="assets/img/0633bb6a84bbdca636f3f0aff5aadf51.jpg" alt="Add Mortgage Bill, mortgage setup with review and fee breakdown" loading="lazy"></figure><p class="shotcap">Four steps to set up a mortgage. The review screen reveals the full fee structure and reward projection before she commits.</p></div>
+      <div style="margin-top: 28px;"><figure class="shot"><img src="../assets/img/0633bb6a84bbdca636f3f0aff5aadf51.jpg" alt="Add Mortgage Bill, mortgage setup with review and fee breakdown" loading="lazy"></figure><p class="shotcap">Four steps to set up a mortgage. The review screen reveals the full fee structure and reward projection before she commits.</p></div>
     </div>
     <div style="margin-top: 56px; padding-top: 36px; border-top: 1px solid #ddd0bb;">
       <div class="mono" style="font-size: 10px; color: #5b5a57;">3.2</div>
@@ -386,7 +420,7 @@
           <div class="card soft"><div class="mono" style="font-size: 9px; color: #9a4e33;">Principle · Reliability Over Features</div><p class="small" style="margin-top: 8px;">One flow that handles both bills correctly beats two parallel flows that drift apart. She is using one product, not two.</p></div>
         </div>
       </div>
-      <div style="margin-top: 28px;"><figure class="shot"><img src="assets/img/9a6135a6af64a1d48c299cb1be40ebea.jpg" alt="Add Rent, rent setup mirroring the mortgage flow" loading="lazy"></figure><p class="shotcap">Rent setup mirrors mortgage, deliberately.</p></div>
+      <div style="margin-top: 28px;"><figure class="shot"><img src="../assets/img/9a6135a6af64a1d48c299cb1be40ebea.jpg" alt="Add Rent, rent setup mirroring the mortgage flow" loading="lazy"></figure><p class="shotcap">Rent setup mirrors mortgage, deliberately.</p></div>
     </div>
     <div style="margin-top: 56px; padding-top: 36px; border-top: 1px solid #ddd0bb;">
       <div class="mono" style="font-size: 10px; color: #5b5a57;">4</div>
@@ -397,7 +431,7 @@
           <div class="card soft"><div class="mono" style="font-size: 9px; color: #9a4e33;">Principle · Constraints Are Product</div><p class="small" style="margin-top: 8px;">So the flow opens with a “How it works” explainer, and scenario states handle the edge cases: insufficient MP balance, unlinked bank, auto-fund toggle. The harder path is acknowledged and designed for, not hidden.</p></div>
         </div>
       </div>
-      <div style="margin-top: 28px;"><figure class="shot"><img src="assets/img/4eb2994cf76d566709f9767c6e3ffe6c.jpg" alt="ACH Path, the alternate flow for users without landlord portals" loading="lazy"></figure><p class="shotcap">The “How it works” screen opens the flow so she understands what she is being asked to do before she does it.</p></div>
+      <div style="margin-top: 28px;"><figure class="shot"><img src="../assets/img/4eb2994cf76d566709f9767c6e3ffe6c.jpg" alt="ACH Path, the alternate flow for users without landlord portals" loading="lazy"></figure><p class="shotcap">The “How it works” screen opens the flow so she understands what she is being asked to do before she does it.</p></div>
     </div>
   </section>
   <section class="sec" id="ch06" data-ch="6">
@@ -438,49 +472,10 @@
   </div>
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props='{"agendaPreview":{"editor":"enum","options":["auto","00","01","02","03","04","05","06","07"],"default":"auto"},"$preview":{"width":1440,"height":900}}'>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
 
 class Component extends DCLogic {
-  track(e) {
-    const el = (e && (e.currentTarget || e.target)) || null;
-    if (!el || !el.querySelectorAll) return;
-    const top = el.scrollTop, vh = el.clientHeight || 900;
-    let ch = 0;
-    el.querySelectorAll('[data-ch]').forEach((n) => { if (n.offsetTop <= top + vh * 0.35) ch = Number(n.getAttribute('data-ch')) || 0; });
-    const hero = el.querySelector('[data-hero]');
-    const end = el.querySelector('[data-end]');
-    const inHero = hero ? top < hero.offsetTop + hero.offsetHeight - vh * 0.45 : top < 360;
-    const atEnd = end ? end.offsetTop < top + vh * 0.8 : false;
-    const mid = !inHero && !atEnd;
-    const s = this.state || {};
-    if (s.ch !== ch || !!s.mid !== mid) this.setState({ ch, mid });
-  }
-  jump(i, e) {
-    const btn = e && e.currentTarget;
-    const root = btn && btn.closest ? btn.closest('.pg') : null;
-    const target = root ? root.querySelector('#ch' + String(i).padStart(2, '0')) : null;
-    if (!root || !target) return;
-    root.scrollTo({ top: Math.max(0, target.offsetTop - 88), behavior: 'smooth' });
-    this.setState({ ch: i });
-  }
-  renderVals() {
-    const s = this.state || {};
-    const h = this.props.hoverPreview || 'none';
-    const p = this.props.agendaPreview || 'auto';
-    const forced = p !== 'auto';
-    const ch = forced ? Number(p) : (s.ch || 0);
-    const mid = forced ? true : !!s.mid;
-    const agenda = {};
-    const go = {};
-    for (let i = 0; i < 8; i++) { agenda['a' + i] = ch === i ? 'on' : ''; go['g' + i] = (e) => this.jump(i, e); }
-    return {
-      peekL: h === 'left' ? 'peek' : '', peekR: h === 'right' ? 'peek' : '',
-      arrowsCls: mid && h === 'none' ? 'off' : '',
-      agendaCls: mid ? 'on' : '',
-      agenda, go,
-      onScroll: (e) => this.track(e),
-    };
-  }
+  renderVals() { return {}; }
 }
 </script>
 </body>

@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Artifice — Sophia Lu</title>
   <meta name="description" content="Sophia Lu — GTM strategy, growth marketing and product. A portfolio you walk through like an evening event.">
-  <meta name="dc-fit" content="zoom 1440">
+  
   <style>html.dc-loading body{visibility:hidden} x-dc{display:contents} helmet{display:none}</style>
   <script>
     document.documentElement.classList.add('dc-loading');
-    if (window.matchMedia('(max-width: 800px)').matches) location.replace('m/artifice.html' + location.hash);
+    if (window.matchMedia('(min-width: 801px)').matches) location.replace('../artifice.html' + location.hash);
   </script>
-  <script src="assets/js/dc-lite.js"></script>
+  <script src="../assets/js/dc-lite.js"></script>
 </head>
 <body>
 <x-dc>
@@ -152,37 +152,86 @@
     .rise { opacity: 1; animation: none; }
     @keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
     @media (prefers-reduced-motion: reduce) { .pg *, .pg { animation: none !important; transition-duration: 1ms !important; } .rise { opacity: 1; animation: none; } }
-    @media (max-width: 800px) {
-      .pg { min-width: 0 !important; }
-      .side, .agenda { display: none !important; }
-      .top { padding: 0 16px; height: 56px; }
-      .wrap { width: auto; margin: 0; padding: 0 16px; box-sizing: border-box; }
-      .hero { grid-template-columns: 1fr; padding: 40px 0 48px; column-gap: 0; }
-      .sec { padding: 56px 0 0; }
-      .sec + .sec { margin-top: 56px; }
-      .col2 { grid-template-columns: 1fr; column-gap: 0; row-gap: 32px; }
-      .grid3 { grid-template-columns: 1fr; }
-      .grid4 { grid-template-columns: 1fr 1fr; gap: 10px; }
-      .grid4.steps { grid-template-columns: 1fr; }
-      .grid5 { grid-template-columns: 1fr 1fr; }
-      .grid2s { grid-template-columns: 1fr; gap: 10px; }
-      .endrow { grid-template-columns: 1fr; }
-      .h2 { font-size: 28px; line-height: 1.1; max-width: 100%; }
-      .lead { font-size: 17px; line-height: 26px; }
-      .body { font-size: 16px; line-height: 25px; max-width: 100%; }
-      .quote { font-size: 24px; line-height: 32px; }
-      .quote::before { font-size: 56px; line-height: 36px; }
-      .big2 { font-size: 32px; line-height: 40px; margin-top: 40px; }
-      .shift { grid-template-columns: 1fr; }
-      .arrowbig { font-size: 24px; }
-      .reachrow { flex-direction: column !important; }
-      .endcard { padding: 20px; }
-      .deckstrip { overflow-x: auto; -webkit-overflow-scrolling: touch; }
-      .deckstrip figure { flex: 0 0 290px; }
-    }
+
+    /* ---------- Mobile artboard (390px) ---------- */
+    .side, .agenda { display: none !important; }
+    [data-ch] { scroll-margin-top: 68px; }
+    .top { height: 56px; padding: 0 16px; }
+    .top > a { flex-direction: column; align-items: flex-start !important; gap: 2px !important; }
+    .top > a .serif { font-size: 21px !important; line-height: 22px !important; }
+    .top > a .mono { font-size: 8.5px !important; line-height: 12px; }
+    .top, .top * { white-space: nowrap; }
+    .top nav { gap: 10px !important; }
+    .toplink { font-size: 12.5px; }
+    .cta { min-height: 36px; padding: 0 10px; font-size: 13px; gap: 0; box-shadow: 0 2px 0 #26314a; }
+    .cta .ar { display: none; }
+    .wrap { width: auto; margin: 0; padding: 0 16px; box-sizing: border-box; }
+    .hero { grid-template-columns: 1fr; column-gap: 0; row-gap: 32px; padding: 32px 0 40px; }
+    .hero h1 { font-size: 34px !important; line-height: 1.06 !important; }
+    .seat { display: inline-block; }
+    .stat .num { font-size: 32px; line-height: 36px; }
+    .sec { padding: 48px 0 0; }
+    .sec + .sec { margin-top: 48px; }
+    .h2 { font-size: 30px; line-height: 1.08; max-width: 100%; }
+    .lead { font-size: 17px; line-height: 26px; max-width: 100%; }
+    .body { font-size: 16px; line-height: 25px; max-width: 100% !important; }
+    .small { font-size: 14.5px; line-height: 22px; }
+    .col2 { grid-template-columns: 1fr; column-gap: 0; row-gap: 24px; }
+    .grid3 { grid-template-columns: 1fr; gap: 14px; }
+    .grid4 { grid-template-columns: 1fr; gap: 12px; }
+    .grid5 { grid-template-columns: 1fr 1fr; row-gap: 4px; }
+    .grid2s { grid-template-columns: 1fr !important; gap: 12px !important; }
+    .fixes { grid-template-columns: 1fr !important; }
+    [style*="repeat(4, minmax(0, 1fr))"] { grid-template-columns: 1fr 1fr !important; row-gap: 6px; }
+    [style*="repeat(2, minmax(0, 1fr))"] { column-gap: 14px !important; }
+    .card { padding: 18px 18px 20px; }
+    .qs li { font-size: 17px; line-height: 25px; grid-template-columns: 36px 1fr; }
+    .callout { padding: 18px 20px; font-size: 17px; line-height: 26px; }
+    .quote { margin: 32px 0 28px; font-size: 26px; line-height: 33px; }
+    .quote::before { font-size: 56px; line-height: 36px; }
+    .big2 { font-size: 30px; line-height: 37px; margin-top: 36px; }
+    .shift { grid-template-columns: 1fr; row-gap: 8px; }
+    .shift .from, .shift .to { padding: 18px; }
+    .shift .serif { font-size: 24px !important; line-height: 30px !important; }
+    .arrowbig { font-size: 24px; transform: rotate(90deg); }
+    .big .serif { font-size: 60px !important; line-height: 62px !important; }
+    .frow .fl .serif { font-size: 30px !important; }
+    .chain { gap: 8px; }
+    .chain .link { font-size: 15px; padding: 8px 13px; }
+    .tbl td { font-size: 14px; line-height: 20px; }
+    .reachrow { grid-template-columns: 1fr; row-gap: 20px; }
+    .deckstrip figure { flex: 0 0 300px; }
+    .endrow { grid-template-columns: 1fr !important; gap: 14px; }
+    .endcard { padding: 20px; }
+    .endcard .serif { font-size: 26px !important; line-height: 30px !important; }
+    .meta { grid-template-columns: 1fr; row-gap: 2px; }
+    .meta span:not(.mono) { margin-bottom: 8px; }
+    .paths, .concepts, .probs { grid-template-columns: 1fr; gap: 14px; }
+    .serif[style*="font-size: 32px; line-height: 38px"] { font-size: 26px !important; line-height: 31px !important; }
+    .res-row { grid-template-columns: 1fr !important; gap: 24px; }
+    /* Journey: hover tooltips become always-visible cards on touch */
+    .jlegend { display: none; }
+    .journey, .journey.five { grid-template-columns: 1fr; gap: 14px; }
+    .journey::before { display: none; }
+    .jstage { display: grid; grid-template-columns: 54px 1fr; column-gap: 14px; row-gap: 8px; align-items: center; text-align: left; padding: 0; }
+    .jstage .jd { grid-column: 1 / -1; position: static; width: auto; margin: 0; opacity: 1; visibility: visible; transform: none; box-shadow: none; }
+    .journey + .col2 { margin-top: 32px !important; }
+    /* TutorMe stage funnel + diagrams */
+    .funnel { flex-direction: column; }
+    .funnel .fs { border-right: 1.5px solid #26314a; border-bottom: 0; }
+    .funnel .fs:last-child { border-bottom: 1.5px solid #26314a; }
+    .dg { padding: 20px 18px; }
+    .dg-row { flex-direction: column; align-items: stretch; }
+    .dg-ar { transform: rotate(90deg); }
+    .dg-end { max-width: none; text-align: center; }
+    .dg-lane { grid-template-columns: 1fr; row-gap: 10px; }
+    .dg-specl { grid-template-columns: 1fr; row-gap: 12px; }
+    .dg-specl > div { text-align: left !important; }
+    .dg-sys { flex-direction: column; }
+    .dg-fun { grid-template-columns: 1fr; row-gap: 20px; }
   </style>
 </helmet>
-<div class="pg" onScroll="{{onScroll}}" style="position: relative; width: 100%; height: 100vh; overflow-y: auto; scroll-behavior: smooth; min-width: 1440px; background: #f4efe4;">
+<div class="pg" style="position: relative; width: 100%; height: 100vh; overflow-y: auto; overflow-x: hidden; scroll-behavior: smooth; min-width: 320px; background: #f4efe4;">
 
   <header class="top">
     <a href="lobby.html" style="display: flex; align-items: baseline; gap: 12px; text-decoration: none; color: #1f2433;">
@@ -191,14 +240,14 @@
     </a>
     <nav aria-label="Profile links" style="display: flex; align-items: center; gap: 28px;">
       <a class="toplink" href="https://www.linkedin.com/in/sophialu520/">LinkedIn ↗</a>
-      <a class="toplink" href="resume.html">Résumé</a>
+      <a class="toplink" href="../resume.html">Résumé</a>
       <a class="cta" href="#">Let’s talk<span class="ar" aria-hidden="true">→</span></a>
     </nav>
   </header><div class="wrap">
     <div class="hero" data-hero="1">
       <div style="display: flex; flex-direction: column;">
         <div class="mono rise" style="font-size: 11px; line-height: 16px; color: #9a4e33; animation-delay: 100ms;">Floor 01 · Opening fireside chat · Artifice</div>
-        <h1 class="serif rise" style="margin: 14px 0 0; font-size: 42px; line-height: 1.04; letter-spacing: -0.01em; animation-delay: 200ms;">Our first art drew 180 RSVPs.<br>Could that audience<br>become a business?</h1>
+        <h1 class="serif rise" style="margin: 14px 0 0; font-size: 42px; line-height: 1.04; letter-spacing: -0.01em; animation-delay: 200ms;">Our first art drew 180 RSVPs. Could that audience become a business?</h1>
         <div class="chips rise" style="margin-top: 20px; animation-delay: 320ms;"><span class="chip">Events</span><span class="chip">Community</span><span class="chip">GTM marketing</span><span class="chip">Partnerships</span></div>
         <p class="rise" style="margin: 18px 0 0; font-size: 16px; line-height: 24px; color: #2f3340; animation-delay: 380ms;"><strong>My role:</strong>COO, working across go-to-market strategy, operations, community development, CRM and partnerships.</p>
         <div class="mono rise" style="margin-top: 28px; font-size: 10px; line-height: 14px; color: #5b5a57; animation-delay: 440ms;">Early signal · first event, “What Gives Art Its Value?”</div>
@@ -208,7 +257,7 @@
           <div class="stat"><span class="serif num">~45K</span><span class="lbl">organic social views</span></div>
           <div class="stat"><span class="serif num">1,705</span><span class="lbl">Luma page views</span></div>
         </div>
-        <button type="button" class="rise seat" onClick="{{go.g0}}" style="margin-top: 30px; align-self: flex-start; animation-delay: 600ms;">Take your seat ↓</button>
+        <a class="rise seat" href="#ch00" style="margin-top: 30px; align-self: flex-start; animation-delay: 600ms;">Take your seat ↓</a>
       </div>
       <div class="rise" style="animation-delay: 300ms;">
         <div class="frame"><svg viewBox="0 0 610 460" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect x="0" y="0" width="610" height="380" fill="#f7f1e6"></rect><rect x="0" y="380" width="610" height="80" fill="#e9dfcc"></rect><line x1="0" y1="380" x2="610" y2="380" stroke="#26314a" stroke-width="1.5"></line><line x1="0" y1="0" x2="0" y2="460" stroke="#26314a" stroke-width="1.5"></line><line x1="610" y1="0" x2="610" y2="460" stroke="#26314a" stroke-width="1.5"></line><line x1="305" y1="0" x2="305" y2="18" stroke="#26314a" stroke-width="1"></line><circle cx="305" cy="26" r="9" fill="#f2cc8f" stroke="#26314a" stroke-width="1"></circle><rect x="190" y="50" width="230" height="130" rx="6" fill="#26314a"></rect><rect x="140" y="262" width="330" height="14" rx="3" fill="#ddd0bb" stroke="#26314a" stroke-width="1.2"></rect><rect x="226" y="206" width="44" height="52" rx="12" fill="#fbf7ef" stroke="#26314a" stroke-width="1.2"></rect><circle cx="248" cy="201" r="10" fill="#c9b8a0" stroke="#26314a" stroke-width="1.5"></circle><rect x="237" y="214" width="22" height="44" rx="10" fill="#c9b8a0" stroke="#26314a" stroke-width="1.5"></rect><rect x="340" y="206" width="44" height="52" rx="12" fill="#fbf7ef" stroke="#26314a" stroke-width="1.2"></rect><circle cx="362" cy="201" r="10" fill="#d8c6ad" stroke="#26314a" stroke-width="1.5"></circle><rect x="351" y="214" width="22" height="44" rx="10" fill="#d8c6ad" stroke="#26314a" stroke-width="1.5"></rect><circle cx="86" cy="318" r="10" fill="#c9b8a0" stroke="#26314a" stroke-width="1.2"></circle><path d="M70 348 q16 -24 32 0" fill="#c9b8a0" stroke="#26314a" stroke-width="1.2"></path><circle cx="140" cy="318" r="10" fill="#d8c6ad" stroke="#26314a" stroke-width="1.2"></circle><path d="M124 348 q16 -24 32 0" fill="#d8c6ad" stroke="#26314a" stroke-width="1.2"></path><circle cx="194" cy="318" r="10" fill="#e4d6c1" stroke="#26314a" stroke-width="1.2"></circle><path d="M178 348 q16 -24 32 0" fill="#e4d6c1" stroke="#26314a" stroke-width="1.2"></path><circle cx="248" cy="318" r="10" fill="#c9b8a0" stroke="#26314a" stroke-width="1.2"></circle><path d="M232 348 q16 -24 32 0" fill="#c9b8a0" stroke="#26314a" stroke-width="1.2"></path><circle cx="302" cy="318" r="10" fill="#d8c6ad" stroke="#26314a" stroke-width="1.2"></circle><path d="M286 348 q16 -24 32 0" fill="#d8c6ad" stroke="#26314a" stroke-width="1.2"></path><circle cx="356" cy="318" r="10" fill="#e4d6c1" stroke="#26314a" stroke-width="1.2"></circle><path d="M340 348 q16 -24 32 0" fill="#e4d6c1" stroke="#26314a" stroke-width="1.2"></path><circle cx="410" cy="318" r="10" fill="#c9b8a0" stroke="#26314a" stroke-width="1.2"></circle><path d="M394 348 q16 -24 32 0" fill="#c9b8a0" stroke="#26314a" stroke-width="1.2"></path><circle cx="464" cy="318" r="10" fill="#d8c6ad" stroke="#26314a" stroke-width="1.2"></circle><path d="M448 348 q16 -24 32 0" fill="#d8c6ad" stroke="#26314a" stroke-width="1.2"></path><circle cx="518" cy="318" r="10" fill="#e4d6c1" stroke="#26314a" stroke-width="1.2"></circle><path d="M502 348 q16 -24 32 0" fill="#e4d6c1" stroke="#26314a" stroke-width="1.2"></path><circle cx="60" cy="362" r="10" fill="#c9b8a0" stroke="#26314a" stroke-width="1.2"></circle><path d="M44 392 q16 -24 32 0" fill="#c9b8a0" stroke="#26314a" stroke-width="1.2"></path><circle cx="114" cy="362" r="10" fill="#d8c6ad" stroke="#26314a" stroke-width="1.2"></circle><path d="M98 392 q16 -24 32 0" fill="#d8c6ad" stroke="#26314a" stroke-width="1.2"></path><circle cx="168" cy="362" r="10" fill="#e4d6c1" stroke="#26314a" stroke-width="1.2"></circle><path d="M152 392 q16 -24 32 0" fill="#e4d6c1" stroke="#26314a" stroke-width="1.2"></path><circle cx="222" cy="362" r="10" fill="#c9b8a0" stroke="#26314a" stroke-width="1.2"></circle><path d="M206 392 q16 -24 32 0" fill="#c9b8a0" stroke="#26314a" stroke-width="1.2"></path><circle cx="276" cy="362" r="10" fill="#d8c6ad" stroke="#26314a" stroke-width="1.2"></circle><path d="M260 392 q16 -24 32 0" fill="#d8c6ad" stroke="#26314a" stroke-width="1.2"></path><circle cx="330" cy="362" r="10" fill="#e4d6c1" stroke="#26314a" stroke-width="1.2"></circle><path d="M314 392 q16 -24 32 0" fill="#e4d6c1" stroke="#26314a" stroke-width="1.2"></path><circle cx="384" cy="362" r="10" fill="#c9b8a0" stroke="#26314a" stroke-width="1.2"></circle><path d="M368 392 q16 -24 32 0" fill="#c9b8a0" stroke="#26314a" stroke-width="1.2"></path><circle cx="438" cy="362" r="10" fill="#d8c6ad" stroke="#26314a" stroke-width="1.2"></circle><path d="M422 392 q16 -24 32 0" fill="#d8c6ad" stroke="#26314a" stroke-width="1.2"></path><circle cx="492" cy="362" r="10" fill="#e4d6c1" stroke="#26314a" stroke-width="1.2"></circle><path d="M476 392 q16 -24 32 0" fill="#e4d6c1" stroke="#26314a" stroke-width="1.2"></path><circle cx="546" cy="362" r="10" fill="#c9b8a0" stroke="#26314a" stroke-width="1.2"></circle><path d="M530 392 q16 -24 32 0" fill="#c9b8a0" stroke="#26314a" stroke-width="1.2"></path><circle cx="86" cy="404" r="10" fill="#c9b8a0" stroke="#26314a" stroke-width="1.2"></circle><path d="M70 434 q16 -24 32 0" fill="#c9b8a0" stroke="#26314a" stroke-width="1.2"></path><circle cx="140" cy="404" r="10" fill="#d8c6ad" stroke="#26314a" stroke-width="1.2"></circle><path d="M124 434 q16 -24 32 0" fill="#d8c6ad" stroke="#26314a" stroke-width="1.2"></path><circle cx="194" cy="404" r="10" fill="#e4d6c1" stroke="#26314a" stroke-width="1.2"></circle><path d="M178 434 q16 -24 32 0" fill="#e4d6c1" stroke="#26314a" stroke-width="1.2"></path><circle cx="248" cy="404" r="10" fill="#c9b8a0" stroke="#26314a" stroke-width="1.2"></circle><path d="M232 434 q16 -24 32 0" fill="#c9b8a0" stroke="#26314a" stroke-width="1.2"></path><circle cx="302" cy="404" r="10" fill="#d8c6ad" stroke="#26314a" stroke-width="1.2"></circle><path d="M286 434 q16 -24 32 0" fill="#d8c6ad" stroke="#26314a" stroke-width="1.2"></path><circle cx="356" cy="404" r="10" fill="#e4d6c1" stroke="#26314a" stroke-width="1.2"></circle><path d="M340 434 q16 -24 32 0" fill="#e4d6c1" stroke="#26314a" stroke-width="1.2"></path><circle cx="410" cy="404" r="10" fill="#c9b8a0" stroke="#26314a" stroke-width="1.2"></circle><path d="M394 434 q16 -24 32 0" fill="#c9b8a0" stroke="#26314a" stroke-width="1.2"></path><circle cx="464" cy="404" r="10" fill="#d8c6ad" stroke="#26314a" stroke-width="1.2"></circle><path d="M448 434 q16 -24 32 0" fill="#d8c6ad" stroke="#26314a" stroke-width="1.2"></path><circle cx="518" cy="404" r="10" fill="#e4d6c1" stroke="#26314a" stroke-width="1.2"></circle><path d="M502 434 q16 -24 32 0" fill="#e4d6c1" stroke="#26314a" stroke-width="1.2"></path><rect x="14" y="166" width="124" height="10" fill="#d9c3a5" stroke="#26314a" stroke-width="1.2"></rect><rect x="20" y="176" width="112" height="86" fill="#ddd0bb" stroke="#26314a" stroke-width="1.2"></rect><rect x="40" y="198" width="72" height="64" fill="#26314a"></rect><path d="M56 262 Q66 224 78 262 Z" fill="#f2cc8f"></path><path d="M72 262 Q86 212 100 262 Z" fill="#e9a96b"></path><ellipse class="hearthglow" cx="76" cy="258" rx="44" ry="10" fill="#f2cc8f" opacity="0.35"></ellipse><rect x="60" y="146" width="30" height="20" fill="#fbf7ef" stroke="#26314a" stroke-width="1.2"></rect><rect x="284" y="232" width="42" height="5" rx="2" fill="#d9c3a5" stroke="#26314a" stroke-width="1.2"></rect><line x1="305" y1="237" x2="305" y2="262" stroke="#26314a" stroke-width="1.2"></line><rect x="291" y="220" width="7" height="12" fill="#fbf7ef" stroke="#26314a" stroke-width="1.2"></rect><rect x="312" y="220" width="7" height="12" fill="#fbf7ef" stroke="#26314a" stroke-width="1.2"></rect><line x1="566" y1="120" x2="566" y2="262" stroke="#26314a" stroke-width="2"></line><ellipse cx="566" cy="262" rx="14" ry="3" fill="#26314a"></ellipse><path d="M546 122 L586 122 L578 96 L554 96 Z" fill="#f2cc8f" stroke="#26314a" stroke-width="1.2"></path><rect x="448" y="48" width="80" height="104" fill="#fbf7ef" stroke="#26314a" stroke-width="1.2"></rect><rect x="458" y="58" width="60" height="58" fill="#e9cf9f"></rect><text x="488" y="132" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="7" letter-spacing="1" fill="#26314a">FIRESIDE</text><text x="488" y="143" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="6" letter-spacing="1" fill="#5b5a57">NO. 01</text></svg></div>
@@ -244,7 +293,7 @@
       <p class="body"><strong>That did not prove we had a repeatable business yet.</strong> It did prove there was enough audience demand and commercial interest to keep testing the model.</p>
       <p class="body">My work after the launch focused on turning that signal into something more structured: defining the audience, shaping the partner value proposition, organizing the CRM and relationship infrastructure, and helping develop a B2B event marketing offer the team could take into future partner conversations.</p>
     </div>
-    <div style="margin-top: 48px;"><figure class="shot"><img src="assets/img/38d8b286a5ee7cf535c7ee42ee21661b.jpg" alt="The first Artifice event, What Gives Art Its Value"></figure><p class="shotcap">The fireside that started it: a full room at What Gives Art Its Value.</p></div>
+    <div style="margin-top: 48px;"><figure class="shot"><img src="../assets/img/38d8b286a5ee7cf535c7ee42ee21661b.jpg" alt="The first Artifice event, What Gives Art Its Value"></figure><p class="shotcap">The fireside that started it: a full room at What Gives Art Its Value.</p></div>
   </section>
   <section class="sec" id="ch01" data-ch="1"><div class="mono" style="font-size: 11px; line-height: 16px; color: #9a4e33;">01 · What were we actually testing?</div><h2 class="serif h2">The first event was a live GTM experiment.</h2>
     <div class="grid3" style="margin-top: 36px;"><div class="card"><div class="mono" style="font-size: 10px; color: #9a4e33;">Hypothesis 1</div><div class="serif" style="font-size: 26px; line-height: 30px; margin: 8px 0 12px;">There is real audience demand</div><p class="small">Could Artifice create an experience compelling enough that people would actively sign up, share it and want access?</p></div><div class="card"><div class="mono" style="font-size: 10px; color: #9a4e33;">Hypothesis 2</div><div class="serif" style="font-size: 26px; line-height: 30px; margin: 8px 0 12px;">The audience could become valuable to partners</div><p class="small">If the event attracted the right mix of artists, collectors, founders, investors, creatives and operators, would brands or strategic partners want access to that community?</p></div><div class="card"><div class="mono" style="font-size: 10px; color: #9a4e33;">Hypothesis 3</div><div class="serif" style="font-size: 26px; line-height: 30px; margin: 8px 0 12px;">The concept had enough traction to continue</div><p class="small">Could the first event create enough signal to justify building a more structured offer, developing partnerships and investing in future programming?</p></div></div>
@@ -300,7 +349,7 @@
       </div>
     </div>
     <div class="reachrow">
-      <figure class="shot"><img src="assets/img/da1275e7c9250679c6078d9ab8409f04.jpg" alt="TikTok video analysis for the event recap video: 21K plays, 2,102 likes, 337 comments, 232 shares, 821 saves, and key metrics of 21.9K video views, 52h:46m:24s total play time, 9.5s average watch time, 14.49% watched full video, 250 new followers"></figure>
+      <figure class="shot"><img src="../assets/img/da1275e7c9250679c6078d9ab8409f04.jpg" alt="TikTok video analysis for the event recap video: 21K plays, 2,102 likes, 337 comments, 232 shares, 821 saves, and key metrics of 21.9K video views, 52h:46m:24s total play time, 9.5s average watch time, 14.49% watched full video, 250 new followers"></figure>
       <div>
         <div class="mono" style="font-size: 10px; color: #5b5a57; margin-bottom: 12px;">Where the contacts kept coming from</div>
         <p class="body" style="margin-top: 0;">One event recap video did the top-of-funnel work on its own: <strong>21.9K views</strong>, <strong>52 hours</strong> of total watch time and <strong>250 new followers</strong>, off 2,102 likes, 337 comments, 232 shares and 821 saves.</p>
@@ -321,11 +370,11 @@
     <div class="deckwrap">
       <div class="mono" style="font-size: 10px; color: #5b5a57;">Sponsor partnership deck · first five slides</div>
       <div class="deckstrip">
-      <figure><img src="assets/img/6824e8b10cb78c71b7fe75abfba29ca7.jpg" alt="Deck cover: Artifice — where art and capital share a table" width="1400" height="787" loading="lazy"><span class="dn mono">01</span></figure>
-      <figure><img src="assets/img/693f7e689546526c76faf38397e160ab.jpg" alt="Traction slide: our first event exceeded capacity — 360% RSVP demand, 180 RSVPs for 50 seats, 61 waitlisted, 1 artwork sold" width="1400" height="787" loading="lazy"><span class="dn mono">02</span></figure>
-      <figure><img src="assets/img/9d03c22e4d492ed42ae1295a7d300cc4.jpg" alt="The fireside: the first event led to a sale — one artwork sold in the room" width="1400" height="787" loading="lazy"><span class="dn mono">03</span></figure>
-      <figure><img src="assets/img/75ba42240252a7b4956381243abf4089.jpg" alt="Community reach: 45K+ combined organic views, ~10K on Instagram and 35K at peak on TikTok" width="1400" height="787" loading="lazy"><span class="dn mono">04</span></figure>
-      <figure><img src="assets/img/9c520b3d41eedadd2dc4f198159fcfe8.jpg" alt="Network and distribution: built on an existing network of ~10K people on the Artifice Luma calendar" width="1400" height="787" loading="lazy"><span class="dn mono">05</span></figure>
+      <figure><img src="../assets/img/6824e8b10cb78c71b7fe75abfba29ca7.jpg" alt="Deck cover: Artifice — where art and capital share a table" width="1400" height="787" loading="lazy"><span class="dn mono">01</span></figure>
+      <figure><img src="../assets/img/693f7e689546526c76faf38397e160ab.jpg" alt="Traction slide: our first event exceeded capacity — 360% RSVP demand, 180 RSVPs for 50 seats, 61 waitlisted, 1 artwork sold" width="1400" height="787" loading="lazy"><span class="dn mono">02</span></figure>
+      <figure><img src="../assets/img/9d03c22e4d492ed42ae1295a7d300cc4.jpg" alt="The fireside: the first event led to a sale — one artwork sold in the room" width="1400" height="787" loading="lazy"><span class="dn mono">03</span></figure>
+      <figure><img src="../assets/img/75ba42240252a7b4956381243abf4089.jpg" alt="Community reach: 45K+ combined organic views, ~10K on Instagram and 35K at peak on TikTok" width="1400" height="787" loading="lazy"><span class="dn mono">04</span></figure>
+      <figure><img src="../assets/img/9c520b3d41eedadd2dc4f198159fcfe8.jpg" alt="Network and distribution: built on an existing network of ~10K people on the Artifice Luma calendar" width="1400" height="787" loading="lazy"><span class="dn mono">05</span></figure>
       </div>
       <div class="deckhint"><span>Scroll sideways to move through the deck →</span></div>
     </div>
@@ -346,7 +395,7 @@
         <p class="body"><strong>These results show early demand and commercial potential.</strong></p>
         <div class="card soft" style="margin-top: 16px;"><div class="mono" style="font-size: 10px; color: #5b5a57; margin-bottom: 10px;">They do not yet prove</div><ul class="list x"><li>A fully repeatable sponsorship model</li><li>Consistent partner renewals</li><li>Profitable unit economics</li><li>A mature revenue engine</li><li>Long-term retention</li><li>A scaled acquisition system</li></ul></div>
         <p class="body" style="margin-top: 16px;">Those were the next things the business needed to test.</p>
-        <div style="margin-top: 24px;"><figure class="shot"><img src="assets/img/26188957c6339f93c803d2cebbfe611c.jpg" alt="The room during the fireside conversation"></figure><p class="shotcap">The room, mid-conversation.</p></div>
+        <div style="margin-top: 24px;"><figure class="shot"><img src="../assets/img/26188957c6339f93c803d2cebbfe611c.jpg" alt="The room during the fireside conversation"></figure><p class="shotcap">The room, mid-conversation.</p></div>
       </div>
     </div>
   </section>
@@ -378,69 +427,13 @@
   </section>
   </div>
 
-  <nav class="agenda {{agendaCls}}" aria-label="Tonight’s agenda">
-    <span class="mono" style="font-size: 9px; line-height: 14px; color: #5b5a57; margin-bottom: 10px;">Tonight’s agenda</span>
-    <button type="button" class="ai {{agenda.a0}}" onClick="{{go.g0}}"><span class="dot"></span><span class="no mono">00</span><span class="nm">Overview</span></button>
-    <button type="button" class="ai {{agenda.a1}}" onClick="{{go.g1}}"><span class="dot"></span><span class="no mono">01</span><span class="nm">What we tested</span></button>
-    <button type="button" class="ai {{agenda.a2}}" onClick="{{go.g2}}"><span class="dot"></span><span class="no mono">02</span><span class="nm">The audience signal</span></button>
-    <button type="button" class="ai {{agenda.a3}}" onClick="{{go.g3}}"><span class="dot"></span><span class="no mono">03</span><span class="nm">The GTM proposition</span></button>
-    <button type="button" class="ai {{agenda.a4}}" onClick="{{go.g4}}"><span class="dot"></span><span class="no mono">04</span><span class="nm">The partner offer</span></button>
-    <button type="button" class="ai {{agenda.a5}}" onClick="{{go.g5}}"><span class="dot"></span><span class="no mono">05</span><span class="nm">The GTM motion</span></button>
-    <button type="button" class="ai {{agenda.a6}}" onClick="{{go.g6}}"><span class="dot"></span><span class="no mono">06</span><span class="nm">The early funnel</span></button>
-    <button type="button" class="ai {{agenda.a7}}" onClick="{{go.g7}}"><span class="dot"></span><span class="no mono">07</span><span class="nm">CRM infrastructure</span></button>
-    <button type="button" class="ai {{agenda.a8}}" onClick="{{go.g8}}"><span class="dot"></span><span class="no mono">08</span><span class="nm">Sales enablement</span></button>
-    <button type="button" class="ai {{agenda.a9}}" onClick="{{go.g9}}"><span class="dot"></span><span class="no mono">09</span><span class="nm">What I owned</span></button>
-    <button type="button" class="ai {{agenda.a10}}" onClick="{{go.g10}}"><span class="dot"></span><span class="no mono">10</span><span class="nm">Results</span></button>
-    <button type="button" class="ai {{agenda.a11}}" onClick="{{go.g11}}"><span class="dot"></span><span class="no mono">11</span><span class="nm">What changed</span></button>
-    <button type="button" class="ai {{agenda.a12}}" onClick="{{go.g12}}"><span class="dot"></span><span class="no mono">12</span><span class="nm">What I learned</span></button>
-  </nav>
-
   
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props='{"agendaPreview":{"editor":"enum","options":["auto","00","01","02","03","04","05","06","07","08","09","10","11","12"],"default":"auto"},"$preview":{"width":1440,"height":900}}'>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
 
 class Component extends DCLogic {
-  track(e) {
-    const el = (e && (e.currentTarget || e.target)) || null;
-    if (!el || !el.querySelectorAll) return;
-    const top = el.scrollTop, vh = el.clientHeight || 900;
-    let ch = 0;
-    el.querySelectorAll('[data-ch]').forEach((n) => { if (n.offsetTop <= top + vh * 0.35) ch = Number(n.getAttribute('data-ch')) || 0; });
-    const hero = el.querySelector('[data-hero]');
-    const end = el.querySelector('[data-end]');
-    const inHero = hero ? top < hero.offsetTop + hero.offsetHeight - vh * 0.45 : top < 360;
-    const atEnd = end ? end.offsetTop < top + vh * 0.8 : false;
-    const mid = !inHero && !atEnd;
-    const s = this.state || {};
-    if (s.ch !== ch || !!s.mid !== mid) this.setState({ ch, mid });
-  }
-  jump(i, e) {
-    const btn = e && e.currentTarget;
-    const root = btn && btn.closest ? btn.closest('.pg') : null;
-    const target = root ? root.querySelector('#ch' + String(i).padStart(2, '0')) : null;
-    if (!root || !target) return;
-    root.scrollTo({ top: Math.max(0, target.offsetTop - 88), behavior: 'smooth' });
-    this.setState({ ch: i });
-  }
-  renderVals() {
-    const s = this.state || {};
-    const h = this.props.hoverPreview || 'none';
-    const p = this.props.agendaPreview || 'auto';
-    const forced = p !== 'auto';
-    const ch = forced ? Number(p) : (s.ch || 0);
-    const mid = forced ? true : !!s.mid;
-    const agenda = {};
-    const go = {};
-    for (let i = 0; i < 13; i++) { agenda['a' + i] = ch === i ? 'on' : ''; go['g' + i] = (e) => this.jump(i, e); }
-    return {
-      peekL: h === 'left' ? 'peek' : '', peekR: h === 'right' ? 'peek' : '',
-      arrowsCls: mid && h === 'none' ? 'off' : '',
-      agendaCls: mid ? 'on' : '',
-      agenda, go,
-      onScroll: (e) => this.track(e),
-    };
-  }
+  renderVals() { return {}; }
 }
 </script>
 </body>

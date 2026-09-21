@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>The lobby — Sophia Lu</title>
+  <meta name="description" content="Sophia Lu — GTM strategy, growth marketing and product. A portfolio you walk through like an evening event.">
+  <meta name="dc-fit" content="fill-width 390 844">
+  <style>html.dc-loading body{visibility:hidden} x-dc{display:contents} helmet{display:none}</style>
+  <script>
+    document.documentElement.classList.add('dc-loading');
+    if (window.matchMedia('(min-width: 801px)').matches) location.replace('../lobby.html' + location.hash);
+  </script>
+  <script src="../assets/js/dc-lite.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Hanken+Grotesk:wght@400;500;600&amp;family=IBM+Plex+Mono&amp;display=swap">
+  <style>
+    body { margin: 0; background: #f4efe4; font-family: "Hanken Grotesk", ui-sans-serif, system-ui, sans-serif; color: #1f2433; }
+    a { color: #26314a; } a:hover { color: #9a4e33; }
+    .scene button { font: inherit; cursor: pointer; color: inherit; }
+    .scene button:focus-visible, .scene a:focus-visible { outline: 2px solid #26314a; outline-offset: 3px; }
+    .mono { font-family: "IBM Plex Mono", ui-monospace, Menlo, monospace; text-transform: uppercase; letter-spacing: 0.12em; }
+    .serif { font-family: "Instrument Serif", Georgia, serif; font-weight: 400; }
+
+    .bar { position: absolute; left: 0; top: 0; z-index: 30; width: 390px; height: 56px; box-sizing: border-box; padding: 0 16px; display: flex; align-items: center; justify-content: space-between; background: rgba(244, 239, 228, 0.94); border-bottom: 1px solid #ddd0bb; }
+    .bar a { text-decoration: none; color: #1f2433; display: flex; flex-direction: column; }
+    .chip { max-width: 190px; padding: 6px 10px; border-radius: 999px; border: 1px solid #cdbfa8; background: #fbf7ef; font-size: 9.5px; line-height: 13px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+    .scroller { position: absolute; left: 0; top: 0; width: 390px; height: var(--dc-h, 844px); overflow-y: auto; display: flex; flex-direction: column-reverse; scroll-snap-type: y proximity; scrollbar-width: none; }
+    .scroller::-webkit-scrollbar { display: none; }
+    .fl { position: relative; flex: none; min-height: var(--dc-h, 844px); box-sizing: border-box; padding: 76px 36px 44px 20px; scroll-snap-align: start; background: #f4efe4; border-bottom: 10px solid #ddd0bb; box-shadow: inset 0 -1px 0 #26314a; }
+    .fl::after { content: ""; position: absolute; right: 0; top: 0; bottom: 0; width: 18px; background: repeating-linear-gradient(180deg, #f8f3ea 0 14px, #dccdb6 14px 18px); border-left: 1.2px solid #26314a; }
+    .fl.roof { background: #efe2c9; }
+    .fl.sky { background: #26314a; color: #f4efe4; border-bottom-color: #26314a; }
+    .fl.sky::after { display: none; }
+    .plate { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 18px; padding: 6px 12px 6px 6px; border: 1.2px solid #26314a; border-radius: 6px; background: #fbf7ef; }
+    .fl.sky .plate { background: #f4efe4; color: #1f2433; }
+    .pn { display: inline-flex; align-items: center; justify-content: center; min-width: 26px; height: 26px; padding: 0 4px; box-sizing: border-box; border-radius: 4px; background: #26314a; color: #f2cc8f; font-size: 11px; }
+    .pe { font-size: 10px; color: #5b5a57; }
+    .rm { display: block; width: 100%; height: auto; margin: 4px 0 20px; }
+    .kick { font-size: 10px; line-height: 14px; color: #5b5a57; }
+    .hero-t { margin: 12px 0 0; font-size: 62px; line-height: 0.92; letter-spacing: -0.015em; }
+    .lead { margin: 16px 0 0; font-size: 19px; line-height: 27px; color: #1f2433; }
+    .body { margin: 12px 0 0; font-size: 16px; line-height: 25px; color: #2f3340; }
+    .fl.sky .body, .fl.sky .small { color: #e6e1d6; }
+    .small { margin: 0; font-size: 14px; line-height: 21px; color: #3d3f47; }
+    .quote { margin: 14px 0 20px; font-size: 19px; line-height: 25px; font-style: italic; color: #5b5a57; }
+    .h { margin: 0; font-size: 32px; line-height: 1.08; letter-spacing: -0.005em; }
+    .lab { margin-top: 18px; font-size: 10px; color: #9a4e33; }
+    .enter { display: flex; align-items: center; justify-content: space-between; min-height: 52px; margin-top: 22px; padding: 0 20px; border-radius: 8px; background: #f2cc8f; border: 1.5px solid #26314a; box-shadow: 0 4px 0 #26314a; text-decoration: none; color: #1f2433; font-size: 16px; font-weight: 600; }
+    .prog { margin-top: 6px; border: 1.2px solid #26314a; border-radius: 6px; background: #fbf7ef; }
+    .prog-h { padding: 12px 14px; font-size: 9.5px; color: #5b5a57; border-bottom: 1px solid #ddd0bb; }
+    .prow { display: grid; grid-template-columns: 34px 1fr; align-items: start; column-gap: 8px; width: 100%; min-height: 48px; padding: 10px 14px; border: 0; border-top: 1px solid #ece3d3; background: transparent; text-align: left; }
+    .prow:first-of-type { border-top: 0; }
+    .pnum { font-size: 11px; line-height: 20px; color: #9a4e33; }
+    .ptxt { font-size: 14.5px; line-height: 20px; color: #1f2433; }
+    .pfmt { grid-column: 2; margin-top: 3px; font-size: 9px; color: #5b5a57; }
+    .climb { margin-top: 22px; font-size: 10px; color: #9a4e33; }
+    .card { margin-top: 18px; padding: 16px; border: 1.5px solid #26314a; border-radius: 6px; background: #fbf7ef; }
+    .kv { display: grid; grid-template-columns: 64px 1fr; row-gap: 8px; margin: 14px 0 0; }
+    .kv dt { font-size: 9.5px; line-height: 20px; color: #5b5a57; }
+    .kv dd { margin: 0; font-size: 14px; line-height: 20px; }
+    .scout-img { display: block; width: 100%; height: auto; margin-top: 14px; border-radius: 4px; border: 1px solid #ddd0bb; }
+    .pins { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 18px; }
+    .pin { position: relative; display: flex; flex-direction: column; gap: 6px; min-height: 132px; padding: 18px 12px 12px; box-sizing: border-box; border: 1.2px solid #26314a; border-radius: 3px; text-decoration: none; color: #1f2433; box-shadow: 0 3px 0 rgba(38, 49, 74, 0.18); }
+    .pin::before { content: ""; position: absolute; left: 50%; top: -6px; width: 12px; height: 12px; margin-left: -6px; border-radius: 999px; background: #b8654a; border: 1px solid #26314a; }
+    .pin:nth-child(odd) { transform: rotate(-1.5deg); } .pin:nth-child(even) { transform: rotate(1.2deg); }
+    .pk { font-size: 9px; color: #9a4e33; }
+    .pt { font-size: 15px; line-height: 19px; font-weight: 600; }
+    .pd { font-size: 12.5px; line-height: 17px; color: #3d3f47; }
+    .pa { position: absolute; right: 10px; bottom: 8px; font-size: 14px; color: #9a4e33; }
+    .swipe { margin-top: 14px; font-size: 9.5px; color: #9a4e33; }
+    .quotes { display: flex; gap: 12px; margin: 10px -36px 0 0; padding: 4px 36px 12px 0; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; }
+    .quotes::-webkit-scrollbar { display: none; }
+    .qc { flex: none; width: 272px; margin: 0; padding: 18px 16px; box-sizing: border-box; scroll-snap-align: start; border: 1.2px solid #26314a; border-radius: 6px; background: #fbf7ef; display: flex; flex-direction: column; justify-content: space-between; gap: 14px; }
+    .qc blockquote { margin: 0; font-size: 19px; line-height: 25px; }
+    .qc figcaption { display: flex; flex-direction: column; gap: 3px; }
+    .qn { font-size: 15px; font-weight: 600; }
+    .qr { font-size: 9px; color: #5b5a57; }
+    .tag { border: 1.5px solid #26314a; border-radius: 10px; overflow: hidden; background: #fffaf2; box-shadow: 0 5px 0 #26314a; }
+    .tag-b { padding: 12px 16px; background: #b8654a; color: #fff; font-size: 11px; }
+    .tag-in { padding: 16px; }
+    .hats { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+    .hats span { padding: 5px 12px; border-radius: 999px; border: 1px solid #cdbfa8; background: #fbf7ef; font-size: 13px; }
+    .contact { display: flex; flex-direction: column; margin-top: 10px; border: 1.2px solid #26314a; border-radius: 6px; background: #fbf7ef; }
+    .contact a { display: grid; grid-template-columns: 80px 1fr; align-items: center; min-height: 52px; padding: 0 14px; border-top: 1px solid #ece3d3; text-decoration: none; color: #1f2433; font-size: 15px; }
+    .contact a:first-child { border-top: 0; }
+    .contact .mono { font-size: 9.5px; color: #5b5a57; }
+    .inv { position: relative; margin: 0 0 26px; padding: 8px; background: #fffaf2; border: 1.5px solid #f4efe4; border-radius: 4px; transform: rotate(-1.5deg); }
+    .inv-in { position: relative; padding: 16px; border: 1px dashed #8a8a84; color: #1f2433; }
+    .stamp { position: absolute; right: 12px; bottom: 12px; padding: 4px 10px; border: 2px solid #b8654a; border-radius: 4px; color: #b8654a; font-size: 12px; transform: rotate(-10deg); }
+    .rsvp { display: flex; align-items: center; justify-content: space-between; min-height: 60px; margin-top: 18px; padding: 8px 20px; border-radius: 8px; background: #f2cc8f; color: #1f2433; text-decoration: none; font-size: 20px; font-weight: 600; }
+    .lc-link { display: flex; align-items: center; min-height: 44px; margin-top: 4px; color: #f2cc8f; font-size: 15px; }
+    .thanks { margin: 22px 0 0; font-size: 22px; line-height: 28px; color: #f4efe4; }
+    .foot { display: flex; gap: 18px; margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(244, 239, 228, 0.25); }
+    .foot a { color: #f4efe4; font-size: 14px; line-height: 44px; }
+
+    .elev { position: absolute; right: 16px; bottom: 20px; z-index: 40; display: flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 18px 0 8px; border-radius: 999px; border: 1.5px solid #26314a; background: #26314a; color: #f4efe4; box-shadow: 0 6px 18px rgba(38, 49, 74, 0.3); font-size: 14px; }
+    .elev .ic { display: inline-flex; flex-direction: column; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 999px; background: #f2cc8f; color: #26314a; font-size: 10px; line-height: 10px; }
+    .shade { position: absolute; inset: 0; z-index: 35; background: rgba(31, 36, 51, 0.35); opacity: 0; visibility: hidden; transition: opacity 200ms ease, visibility 0s 200ms; border: 0; padding: 0; }
+    .panel { position: absolute; right: 16px; bottom: 84px; z-index: 41; width: 250px; padding: 12px; box-sizing: border-box; border: 1.5px solid #26314a; border-radius: 12px; background: #fbf7ef; box-shadow: 0 10px 30px rgba(38, 49, 74, 0.25); opacity: 0; visibility: hidden; transform: translateY(10px); transition: opacity 200ms ease, transform 250ms cubic-bezier(0.22, 1, 0.36, 1), visibility 0s 250ms; }
+    .open .shade, .open .panel { opacity: 1; visibility: visible; transform: none; transition: opacity 200ms ease, transform 250ms cubic-bezier(0.22, 1, 0.36, 1), visibility 0s 0s; }
+    .panel-h { padding: 2px 4px 10px; font-size: 9.5px; color: #5b5a57; }
+    .eb { display: flex; align-items: center; gap: 12px; width: 100%; min-height: 44px; padding: 0 6px; border: 0; border-radius: 8px; background: transparent; text-align: left; font-size: 14.5px; }
+    .ebn { display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 999px; border: 1.2px solid #26314a; font-size: 10px; flex: none; }
+    .eb.on { background: #f2cc8f; }
+    .eb.on .ebn { background: #26314a; color: #f2cc8f; }
+
+    .scene .elev { color: #f4efe4; }
+    .fl.sky .inv .small { color: #5b5a57; }
+    @media (prefers-reduced-motion: reduce) { .scene *, .scene { transition-duration: 1ms !important; } }
+  </style>
+</helmet>
+<div class="scene {{openCls}}" style="position: relative; width: 390px; height: 844px; overflow: hidden; background: #f4efe4;">
+  <div class="scroller" onScroll="{{onScroll}}">
+    <section class="fl" id="fl-L" data-fl="L">
+      <div class="plate"><span class="mono pn">L</span><span class="mono pe">Lobby</span></div>
+      <div class="mono kick">A networking event by Sophia Lu</div>
+      <h1 class="serif hero-t">Portfolio<br>After Hours</h1>
+      <p class="lead">I help bring products and ideas to market.</p>
+      <p class="body">Each floor has different events that explain the social. Thanks for coming to my events.</p>
+      <p class="serif quote">In an increasingly automated world, meaningful work still begins with people.</p>
+      <svg class="rm" viewBox="0 0 350 190" aria-hidden="true"><rect x="0" y="0" width="350" height="190" fill="#f7f1e6"></rect><rect x="0" y="160" width="350" height="30" fill="#e9dfcc"></rect><line x1="0" y1="160" x2="350" y2="160" stroke="#26314a" stroke-width="1.2"></line><line x1="175" y1="0" x2="175" y2="22" stroke="#26314a"></line><ellipse cx="175" cy="36" rx="16" ry="14" fill="#fffaf2" stroke="#26314a" stroke-width="1.2"></ellipse><rect x="40" y="40" width="44" height="56" fill="#fffaf2" stroke="#26314a" stroke-width="1"></rect><rect x="48" y="50" width="28" height="36" fill="#dfe6f0"></rect><rect x="262" y="44" width="50" height="40" fill="#fffaf2" stroke="#26314a" stroke-width="1"></rect><circle cx="287" cy="64" r="11" fill="#b8654a"></circle><rect x="104" y="112" width="130" height="30" rx="10" fill="#f2c1b6" stroke="#26314a" stroke-width="1.2"></rect><rect x="98" y="132" width="142" height="28" rx="8" fill="#f2c1b6" stroke="#26314a" stroke-width="1.2"></rect><circle cx="262" cy="100" r="8" fill="#c9b8a0" stroke="#26314a" stroke-width="1.2"></circle><rect x="253" y="111" width="18" height="44" rx="8" fill="#c9b8a0" stroke="#26314a" stroke-width="1.2"></rect><circle cx="292" cy="104" r="8" fill="#b8654a" stroke="#26314a" stroke-width="1.2"></circle><rect x="283" y="115" width="18" height="44" rx="8" fill="#b8654a" stroke="#26314a" stroke-width="1.2"></rect><rect x="0.6" y="0.6" width="348.8" height="188.8" rx="5" fill="none" stroke="#26314a" stroke-width="1.2"></rect></svg>
+      <div class="prog"><div class="mono prog-h">Tonight’s program · tap a floor</div><button type="button" class="prow" onClick="{{go.g1}}"><span class="mono pnum">01</span><span class="ptxt">Our first art drew 180 RSVPs. Could that audience become a business?</span><span class="mono pfmt">Fireside chat</span></button><button type="button" class="prow" onClick="{{go.g2}}"><span class="mono pnum">02</span><span class="ptxt">How do you turn someone’s entire career into something people want to buy?</span><span class="mono pfmt">Growth workshop</span></button><button type="button" class="prow" onClick="{{go.g3}}"><span class="mono pnum">03</span><span class="ptxt">How do you make paying rent with crypto feel like an ordinary day?</span><span class="mono pfmt">Roundtable</span></button><button type="button" class="prow" onClick="{{go.g4}}"><span class="mono pnum">04</span><span class="ptxt">Everyone knows how to ask AI a question. How do you get students to actually learn from it?</span><span class="mono pfmt">Product demo</span></button><button type="button" class="prow" onClick="{{go.g5}}"><span class="mono pnum">05</span><span class="ptxt">AI Demo Day</span><span class="mono pfmt">Demo day</span></button><button type="button" class="prow" onClick="{{go.g6}}"><span class="mono pnum">06</span><span class="ptxt">Posted & Pinned</span><span class="mono pfmt">Social hour</span></button><button type="button" class="prow" onClick="{{go.gR1}}"><span class="mono pnum">R1</span><span class="ptxt">Words around the room</span><span class="mono pfmt">Rooftop 1</span></button><button type="button" class="prow" onClick="{{go.gR2}}"><span class="mono pnum">R2</span><span class="ptxt">Meet the host</span><span class="mono pfmt">Rooftop 2</span></button></div>
+      <div class="climb mono"><span aria-hidden="true">↑</span> Scroll up to climb</div>
+    </section>
+    <section class="fl" id="fl-1" data-fl="1">
+      <div class="plate"><span class="mono pn">01</span><span class="mono pe">Opening fireside chat</span></div><svg class="rm" viewBox="0 0 350 190" aria-hidden="true"><rect x="0" y="0" width="350" height="190" fill="#f7f1e6"></rect><rect x="0" y="160" width="350" height="30" fill="#e9dfcc"></rect><line x1="0" y1="160" x2="350" y2="160" stroke="#26314a" stroke-width="1.2"></line><rect x="135" y="58" width="80" height="102" fill="#d9c3a5" stroke="#26314a" stroke-width="1.2"></rect><rect x="150" y="96" width="50" height="64" rx="25" fill="#26314a"></rect><path d="M175 150 C160 138 168 124 175 112 C182 124 190 138 175 150 Z" fill="#f2cc8f"></path><rect x="44" y="118" width="62" height="42" rx="10" fill="#7c8b6f" stroke="#26314a" stroke-width="1.2"></rect><rect x="244" y="118" width="62" height="42" rx="10" fill="#7c8b6f" stroke="#26314a" stroke-width="1.2"></rect><circle cx="75" cy="82" r="7.2" fill="#d8c6ad" stroke="#26314a" stroke-width="1.2"></circle><rect x="66.9" y="92.2" width="16.2" height="39.6" rx="7.1" fill="#d8c6ad" stroke="#26314a" stroke-width="1.2"></rect><circle cx="275" cy="82" r="7.2" fill="#b8654a" stroke="#26314a" stroke-width="1.2"></circle><rect x="266.9" y="92.2" width="16.2" height="39.6" rx="7.1" fill="#b8654a" stroke="#26314a" stroke-width="1.2"></rect><rect x="0.6" y="0.6" width="348.8" height="188.8" rx="5" fill="none" stroke="#26314a" stroke-width="1.2"></rect></svg><h2 class="serif h">Our first art drew 180 RSVPs. Could that audience become a business?</h2><div class="mono lab">Resulted</div><p class="body" style="margin-top: 6px;">180 RSVPs for 50 seats and 45,000+ views.</p><a class="enter" href="artifice.html">Enter this session <span aria-hidden="true">→</span></a>
+    </section>
+    <section class="fl" id="fl-2" data-fl="2">
+      <div class="plate"><span class="mono pn">02</span><span class="mono pe">Growth workshop</span></div><svg class="rm" viewBox="0 0 350 190" aria-hidden="true"><rect x="0" y="0" width="350" height="190" fill="#f7f1e6"></rect><rect x="0" y="160" width="350" height="30" fill="#e9dfcc"></rect><line x1="0" y1="160" x2="350" y2="160" stroke="#26314a" stroke-width="1.2"></line><rect x="60" y="34" width="22" height="22" fill="#f6dc7a" stroke="#26314a" stroke-width="0.8" transform="rotate(-4 71 45)"></rect><rect x="92" y="40" width="22" height="22" fill="#f2c1b6" stroke="#26314a" stroke-width="0.8" transform="rotate(3 103 51)"></rect><rect x="124" y="32" width="22" height="22" fill="#cfe0b4" stroke="#26314a" stroke-width="0.8" transform="rotate(-2 135 43)"></rect><rect x="196" y="38" width="22" height="22" fill="#f6dc7a" stroke="#26314a" stroke-width="0.8" transform="rotate(5 207 49)"></rect><rect x="228" y="32" width="22" height="22" fill="#f2c1b6" stroke="#26314a" stroke-width="0.8" transform="rotate(-3 239 43)"></rect><rect x="260" y="40" width="22" height="22" fill="#cfe0b4" stroke="#26314a" stroke-width="0.8" transform="rotate(2 271 51)"></rect><rect x="70" y="112" width="210" height="12" rx="3" fill="#d9c3a5" stroke="#26314a" stroke-width="1.2"></rect><line x1="86" y1="124" x2="86" y2="160" stroke="#26314a" stroke-width="1.4"></line><line x1="264" y1="124" x2="264" y2="160" stroke="#26314a" stroke-width="1.4"></line><circle cx="120" cy="74" r="7.2" fill="#c9b8a0" stroke="#26314a" stroke-width="1.2"></circle><rect x="111.9" y="84.2" width="16.2" height="39.6" rx="7.1" fill="#c9b8a0" stroke="#26314a" stroke-width="1.2"></rect><circle cx="175" cy="70" r="7.2" fill="#b8654a" stroke="#26314a" stroke-width="1.2"></circle><rect x="166.9" y="80.2" width="16.2" height="39.6" rx="7.1" fill="#b8654a" stroke="#26314a" stroke-width="1.2"></rect><circle cx="230" cy="74" r="7.2" fill="#d8c6ad" stroke="#26314a" stroke-width="1.2"></circle><rect x="221.9" y="84.2" width="16.2" height="39.6" rx="7.1" fill="#d8c6ad" stroke="#26314a" stroke-width="1.2"></rect><rect x="0.6" y="0.6" width="348.8" height="188.8" rx="5" fill="none" stroke="#26314a" stroke-width="1.2"></rect></svg><h2 class="serif h">How do you turn someone’s entire career into something people want to buy?</h2><div class="mono lab">Resulted</div><p class="body" style="margin-top: 6px;">An offer easier to understand, trust and purchase.</p><a class="enter" href="pmmca.html">Enter this session <span aria-hidden="true">→</span></a>
+    </section>
+    <section class="fl" id="fl-3" data-fl="3">
+      <div class="plate"><span class="mono pn">03</span><span class="mono pe">Private roundtable</span></div><svg class="rm" viewBox="0 0 350 190" aria-hidden="true"><rect x="0" y="0" width="350" height="190" fill="#f7f1e6"></rect><rect x="0" y="160" width="350" height="30" fill="#e9dfcc"></rect><line x1="0" y1="160" x2="350" y2="160" stroke="#26314a" stroke-width="1.2"></line><line x1="175" y1="0" x2="175" y2="40" stroke="#26314a"></line><path d="M150 40 L200 40 L186 58 L164 58 Z" fill="#f2cc8f" stroke="#26314a"></path><ellipse cx="175" cy="64" rx="30" ry="6" fill="rgba(242,204,143,0.55)"></ellipse><ellipse cx="175" cy="126" rx="86" ry="16" fill="#d9c3a5" stroke="#26314a" stroke-width="1.2"></ellipse><line x1="175" y1="142" x2="175" y2="160" stroke="#26314a" stroke-width="1.6"></line><circle cx="100" cy="84" r="6.8" fill="#c9b8a0" stroke="#26314a" stroke-width="1.2"></circle><rect x="92.35" y="93.8" width="15.3" height="37.4" rx="6.65" fill="#c9b8a0" stroke="#26314a" stroke-width="1.2"></rect><circle cx="145" cy="78" r="6.8" fill="#b8654a" stroke="#26314a" stroke-width="1.2"></circle><rect x="137.35" y="87.8" width="15.3" height="37.4" rx="6.65" fill="#b8654a" stroke="#26314a" stroke-width="1.2"></rect><circle cx="205" cy="78" r="6.8" fill="#d8c6ad" stroke="#26314a" stroke-width="1.2"></circle><rect x="197.35" y="87.8" width="15.3" height="37.4" rx="6.65" fill="#d8c6ad" stroke="#26314a" stroke-width="1.2"></rect><circle cx="250" cy="84" r="6.8" fill="#7c8b6f" stroke="#26314a" stroke-width="1.2"></circle><rect x="242.35" y="93.8" width="15.3" height="37.4" rx="6.65" fill="#7c8b6f" stroke="#26314a" stroke-width="1.2"></rect><rect x="0.6" y="0.6" width="348.8" height="188.8" rx="5" fill="none" stroke="#26314a" stroke-width="1.2"></rect></svg><h2 class="serif h">How do you make paying rent with crypto feel like an ordinary day?</h2><div class="mono lab">Resulted</div><p class="body" style="margin-top: 6px;">Onboarding built around six concerns, from security to legitimacy.</p><a class="enter" href="megprimepay.html">Enter this session <span aria-hidden="true">→</span></a>
+    </section>
+    <section class="fl" id="fl-4" data-fl="4">
+      <div class="plate"><span class="mono pn">04</span><span class="mono pe">Product demonstration</span></div><svg class="rm" viewBox="0 0 350 190" aria-hidden="true"><rect x="0" y="0" width="350" height="190" fill="#f7f1e6"></rect><rect x="0" y="160" width="350" height="30" fill="#e9dfcc"></rect><line x1="0" y1="160" x2="350" y2="160" stroke="#26314a" stroke-width="1.2"></line><rect x="78" y="22" width="194" height="92" rx="4" fill="#26314a"></rect><text x="175" y="62" text-anchor="middle" font-family="Instrument Serif, Georgia, serif" font-size="26" fill="#f2cc8f">Toki</text><text x="175" y="84" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="8" letter-spacing="1.5" fill="#e6e1d6">GUIDED TUTORING</text><rect x="40" y="140" width="270" height="20" fill="#d9c3a5" stroke="#26314a" stroke-width="1.2"></rect><circle cx="150" cy="100" r="7.2" fill="#b8654a" stroke="#26314a" stroke-width="1.2"></circle><rect x="141.9" y="110.2" width="16.2" height="39.6" rx="7.1" fill="#b8654a" stroke="#26314a" stroke-width="1.2"></rect><circle cx="60" cy="104" r="6.4" fill="#c9b8a0" stroke="#26314a" stroke-width="1.2"></circle><rect x="52.8" y="113.4" width="14.4" height="35.2" rx="6.2" fill="#c9b8a0" stroke="#26314a" stroke-width="1.2"></rect><circle cx="292" cy="104" r="6.4" fill="#d8c6ad" stroke="#26314a" stroke-width="1.2"></circle><rect x="284.8" y="113.4" width="14.4" height="35.2" rx="6.2" fill="#d8c6ad" stroke="#26314a" stroke-width="1.2"></rect><rect x="0.6" y="0.6" width="348.8" height="188.8" rx="5" fill="none" stroke="#26314a" stroke-width="1.2"></rect></svg><h2 class="serif h">Everyone knows how to ask AI a question. How do you get students to actually learn from it?</h2><div class="mono lab">Resulted</div><p class="body" style="margin-top: 6px;">Toki guides students through the thinking instead of answering for them.</p><a class="enter" href="tutorme.html">Enter this session <span aria-hidden="true">→</span></a>
+    </section>
+    <section class="fl" id="fl-5" data-fl="5">
+      <div class="plate"><span class="mono pn">05</span><span class="mono pe">Demo day</span></div><svg class="rm" viewBox="0 0 350 190" aria-hidden="true"><rect x="0" y="0" width="350" height="190" fill="#f7f1e6"></rect><rect x="0" y="160" width="350" height="30" fill="#e9dfcc"></rect><line x1="0" y1="160" x2="350" y2="160" stroke="#26314a" stroke-width="1.2"></line><rect x="112" y="118" width="126" height="10" fill="#d9c3a5" stroke="#26314a" stroke-width="1.2"></rect><line x1="124" y1="128" x2="124" y2="160" stroke="#26314a" stroke-width="1.4"></line><line x1="226" y1="128" x2="226" y2="160" stroke="#26314a" stroke-width="1.4"></line><ellipse cx="175" cy="72" rx="80" ry="46" fill="rgba(242,204,143,0.35)"></ellipse><rect x="132" y="44" width="86" height="60" rx="4" fill="#26314a" stroke="#26314a" stroke-width="1.2"></rect><rect x="168" y="104" width="14" height="14" fill="#26314a"></rect><text x="175" y="80" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" letter-spacing="1.5" fill="#f2cc8f">SCOUT</text><rect x="26" y="30" width="58" height="22" rx="3" fill="#b8654a"></rect><text x="55" y="45" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="8" letter-spacing="1" fill="#fff">● LIVE</text><circle cx="270" cy="96" r="7.2" fill="#b8654a" stroke="#26314a" stroke-width="1.2"></circle><rect x="261.9" y="106.2" width="16.2" height="39.6" rx="7.1" fill="#b8654a" stroke="#26314a" stroke-width="1.2"></rect><rect x="0.6" y="0.6" width="348.8" height="188.8" rx="5" fill="none" stroke="#26314a" stroke-width="1.2"></rect></svg><h2 class="serif h">AI Demo Day</h2><p class="body">An agent Sophia built to do the work faster.</p>
+      <div class="card"><div class="serif" style="font-size: 30px; line-height: 32px;">Scout</div><p class="small" style="margin-top: 6px;">An AI research agent that finds the founders worth pitching.</p>
+        <dl class="kv"><dt class="mono">In</dt><dd>Funding news, locations, team size, LinkedIn bios</dd><dt class="mono">Out</dt><dd>5 strong fits, ranked with reasons</dd><dt class="mono">Result</dt><dd>4× more founders qualified a week. Researching ten leads went from a day to an hour.</dd></dl>
+        <img class="scout-img" src="../assets/img/6c0d83aacefcc087dfe090e8a319a567.png" alt="A Scout briefing in Telegram" width="910" height="580" loading="lazy">
+      </div><a class="enter" href="scout.html">See how it’s built <span aria-hidden="true">→</span></a>
+    </section>
+    <section class="fl" id="fl-6" data-fl="6">
+      <div class="plate"><span class="mono pn">06</span><span class="mono pe">Social hour</span></div><svg class="rm" viewBox="0 0 350 190" aria-hidden="true"><rect x="0" y="0" width="350" height="190" fill="#f7f1e6"></rect><rect x="0" y="160" width="350" height="30" fill="#e9dfcc"></rect><line x1="0" y1="160" x2="350" y2="160" stroke="#26314a" stroke-width="1.2"></line><rect x="60" y="24" width="230" height="104" fill="#d9c3a5" stroke="#26314a" stroke-width="1.2"></rect><rect x="76" y="36" width="48" height="38" fill="#fffaf2" stroke="#26314a" stroke-width="0.8" transform="rotate(-3 100 55)"></rect><circle cx="100" cy="40" r="3" fill="#b8654a"></circle><rect x="136" y="40" width="42" height="50" fill="#f6dc7a" stroke="#26314a" stroke-width="0.8" transform="rotate(2 157 65)"></rect><circle cx="157" cy="44" r="3" fill="#b8654a"></circle><rect x="190" y="34" width="46" height="40" fill="#fffaf2" stroke="#26314a" stroke-width="0.8" transform="rotate(4 213 54)"></rect><circle cx="213" cy="38" r="3" fill="#b8654a"></circle><rect x="246" y="44" width="32" height="34" fill="#cfe0b4" stroke="#26314a" stroke-width="0.8" transform="rotate(-4 262 61)"></rect><circle cx="262" cy="48" r="3" fill="#b8654a"></circle><rect x="96" y="82" width="40" height="32" fill="#f2c1b6" stroke="#26314a" stroke-width="0.8" transform="rotate(3 116 98)"></rect><circle cx="116" cy="86" r="3" fill="#b8654a"></circle><rect x="170" y="94" width="50" height="26" fill="#fffaf2" stroke="#26314a" stroke-width="0.8" transform="rotate(-2 195 107)"></rect><circle cx="195" cy="98" r="3" fill="#b8654a"></circle><circle cx="40" cy="100" r="6.4" fill="#c9b8a0" stroke="#26314a" stroke-width="1.2"></circle><rect x="32.8" y="109.4" width="14.4" height="35.2" rx="6.2" fill="#c9b8a0" stroke="#26314a" stroke-width="1.2"></rect><circle cx="312" cy="100" r="6.4" fill="#b8654a" stroke="#26314a" stroke-width="1.2"></circle><rect x="304.8" y="109.4" width="14.4" height="35.2" rx="6.2" fill="#b8654a" stroke="#26314a" stroke-width="1.2"></rect><rect x="0.6" y="0.6" width="348.8" height="188.8" rx="5" fill="none" stroke="#26314a" stroke-width="1.2"></rect></svg><h2 class="serif h">Posted &amp; Pinned</h2><p class="body">Posts, articles and community work that brought people in.</p><div class="pins"><a class="pin" href="https://www.linkedin.com/posts/sophialu520_you-dont-need-a-designer-as-a-designer-activity-7436794816778321920-doo_?utm_source=share&amp;utm_medium=member_desktop&amp;rcm=ACoAACej6WQBNHzMNjgihn6s5QdFS5k3HBpibSw" target="_blank" rel="noopener" style="background: #fffaf2;"><span class="mono pk">LinkedIn</span><span class="pt">You don’t need a designer.</span><span class="pd">As a designer, I agree · ♥ 36K+ impressions</span><span class="pa" aria-hidden="true">↗</span></a><a class="pin" href="https://happyhema.substack.com/p/the-10-reasons-why-your-community" target="_blank" rel="noopener" style="background: #f6dc7a;"><span class="mono pk">Substack</span><span class="pt">10 Reasons Why Your Community is Cooked</span><span class="pd">1 of 10 long-form articles</span><span class="pa" aria-hidden="true">↗</span></a><a class="pin" href="https://www.linkedin.com/company/fuzhouamerica/" target="_blank" rel="noopener" style="background: #cfe0b4;"><span class="mono pk">Community</span><span class="pt">Fuzhou America group</span><span class="pd">1000+ new members</span><span class="pa" aria-hidden="true">↗</span></a><a class="pin" href="https://www.linkedin.com/in/sophialu520/" target="_blank" rel="noopener" style="background: #f2c1b6;"><span class="mono pk">LinkedIn</span><span class="pt">Follow me on LinkedIn</span><span class="pd">Posts on design, growth and community</span><span class="pa" aria-hidden="true">↗</span></a></div>
+    </section>
+    <section class="fl roof" id="fl-R1" data-fl="R1">
+      <div class="plate"><span class="mono pn">R1</span><span class="mono pe">Rooftop · Level 1</span></div><svg class="rm" viewBox="0 0 350 190" aria-hidden="true"><rect x="0" y="0" width="350" height="190" fill="#f1e2c8"></rect><rect x="0" y="160" width="350" height="30" fill="#e9dfcc"></rect><line x1="0" y1="160" x2="350" y2="160" stroke="#26314a" stroke-width="1.2"></line><path d="M0 22 Q87 44 175 26 T350 24" fill="none" stroke="#26314a" stroke-width="1"></path><circle cx="30" cy="29" r="4" fill="#f2cc8f"></circle><circle cx="70" cy="35" r="4" fill="#f2cc8f"></circle><circle cx="110" cy="36" r="4" fill="#f2cc8f"></circle><circle cx="150" cy="31" r="4" fill="#f2cc8f"></circle><circle cx="200" cy="27" r="4" fill="#f2cc8f"></circle><circle cx="240" cy="30" r="4" fill="#f2cc8f"></circle><circle cx="280" cy="33" r="4" fill="#f2cc8f"></circle><circle cx="320" cy="28" r="4" fill="#f2cc8f"></circle><rect x="0" y="102" width="34" height="58" fill="#c9cfd9"></rect><rect x="40" y="76" width="24" height="84" fill="#c9cfd9"></rect><rect x="70" y="110" width="40" height="50" fill="#c9cfd9"></rect><rect x="250" y="90" width="30" height="70" fill="#c9cfd9"></rect><rect x="286" y="64" width="22" height="96" fill="#c9cfd9"></rect><rect x="312" y="100" width="38" height="60" fill="#c9cfd9"></rect><circle cx="120" cy="96" r="8" fill="#7c8b6f" stroke="#26314a" stroke-width="1.2"></circle><rect x="111" y="107" width="18" height="44" rx="8" fill="#7c8b6f" stroke="#26314a" stroke-width="1.2"></rect><circle cx="160" cy="92" r="8" fill="#b8654a" stroke="#26314a" stroke-width="1.2"></circle><rect x="151" y="103" width="18" height="44" rx="8" fill="#b8654a" stroke="#26314a" stroke-width="1.2"></rect><circle cx="200" cy="96" r="8" fill="#d8c6ad" stroke="#26314a" stroke-width="1.2"></circle><rect x="191" y="107" width="18" height="44" rx="8" fill="#d8c6ad" stroke="#26314a" stroke-width="1.2"></rect><circle cx="240" cy="100" r="8" fill="#26314a" stroke="#26314a" stroke-width="1.2"></circle><rect x="231" y="111" width="18" height="44" rx="8" fill="#26314a" stroke="#26314a" stroke-width="1.2"></rect><rect x="0.6" y="0.6" width="348.8" height="188.8" rx="5" fill="none" stroke="#26314a" stroke-width="1.2"></rect></svg><h2 class="serif h">Words around the room</h2><p class="body">People Sophia has worked with, in their own words.</p><div class="mono swipe">Swipe for more →</div><div class="quotes"><figure class="qc"><blockquote class="serif">“I could bring Sophia a half formed idea and we would leave the conversation with something we could actually move forward with. She helped clarify the direction, worked through the details, and kept things moving.”</blockquote><figcaption><span class="qn">Ryan Levychin</span><span class="mono qr">Director · Aurelian Labs</span></figcaption></figure><figure class="qc"><blockquote class="serif">“Sophia was my first hire when I built Cotiviti’s UX department. She’s exceptional across the full UX discipline and balances business needs with real user advocacy.”</blockquote><figcaption><span class="qn">James Bowman, CUA</span><span class="mono qr">UX leader · Cotiviti (former)</span></figcaption></figure><figure class="qc"><blockquote class="serif">“What I liked about working with Sophia was that she thought beyond the design itself. She cared about how people would discover the product, understand its value, and decide to use it. That made her a really helpful partner early on.”</blockquote><figcaption><span class="qn">Pei You</span><span class="mono qr">Owner · Frosty Cone</span></figcaption></figure><figure class="qc"><blockquote class="serif">“Sophia is user-obsessed. She translates complex requirements into simple, intuitive designs and brings diverse teams together around a shared goal.”</blockquote><figcaption><span class="qn">Dal Price</span><span class="mono qr">Former manager · Cotiviti</span></figcaption></figure><figure class="qc"><blockquote class="serif">“As our founding designer, Sophia helped turn early ideas into a product people could understand and use. She was comfortable working through ambiguity, asking thoughtful questions, and helping us decide what mattered most before jumping into design.”</blockquote><figcaption><span class="qn">Kevin Su</span><span class="mono qr">Founder · Tutor Me</span></figcaption></figure><figure class="qc"><blockquote class="serif">“Working with Sophia at Hema Designs, I’ve really appreciated how naturally she connects with people. She’s curious, asks thoughtful questions, and makes people feel comfortable sharing what they’re working on and where they need help.”</blockquote><figcaption><span class="qn">Jenny Lu</span><span class="mono qr">Founder · Hema Designs</span></figcaption></figure></div>
+    </section>
+    <section class="fl roof" id="fl-R2" data-fl="R2">
+      <div class="plate"><span class="mono pn">R2</span><span class="mono pe">Rooftop · Level 2</span></div><svg class="rm" viewBox="0 0 350 190" aria-hidden="true"><rect x="0" y="0" width="350" height="190" fill="#e9d8bd"></rect><rect x="0" y="160" width="350" height="30" fill="#e9dfcc"></rect><line x1="0" y1="160" x2="350" y2="160" stroke="#26314a" stroke-width="1.2"></line><rect x="30" y="116" width="290" height="44" fill="#8a5a3c" stroke="#26314a" stroke-width="1.2"></rect><rect x="24" y="110" width="302" height="8" fill="#d9c3a5" stroke="#26314a" stroke-width="1.2"></rect><line x1="80" y1="0" x2="80" y2="30" stroke="#26314a"></line><circle cx="80" cy="36" r="6" fill="#f2cc8f" stroke="#26314a"></circle><line x1="175" y1="0" x2="175" y2="40" stroke="#26314a"></line><circle cx="175" cy="46" r="6" fill="#f2cc8f" stroke="#26314a"></circle><line x1="270" y1="0" x2="270" y2="30" stroke="#26314a"></line><circle cx="270" cy="36" r="6" fill="#f2cc8f" stroke="#26314a"></circle><circle cx="175" cy="62" r="8" fill="#b8654a" stroke="#26314a" stroke-width="1.2"></circle><rect x="166" y="73" width="18" height="44" rx="8" fill="#b8654a" stroke="#26314a" stroke-width="1.2"></rect><rect x="150" y="88" width="50" height="22" fill="#fffaf2" stroke="#26314a"></rect><text x="175" y="102" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="6" letter-spacing="1" fill="#9a4e33">HELLO</text><rect x="0.6" y="0.6" width="348.8" height="188.8" rx="5" fill="none" stroke="#26314a" stroke-width="1.2"></rect></svg><div class="tag"><div class="tag-b mono">Hello, my name is</div><div class="tag-in"><div class="serif" style="font-size: 60px; line-height: 60px;">Sophia</div>
+        <p class="body" style="margin-top: 8px;">I help bring products and ideas to market, working across product, growth, community and operations.</p>
+        <div class="hats"><span>Designer</span><span>Operator</span><span>Marketer</span><span>Host</span></div></div></div>
+      <div class="mono lab" style="margin-top: 28px;">Exchange information</div>
+      <div class="contact">
+        <a href="mailto:lusophia95@gmail.com"><span class="mono">Email</span><span>lusophia95@gmail.com</span></a>
+        <a href="https://www.linkedin.com/in/sophialu520/" target="_blank" rel="noopener"><span class="mono">LinkedIn</span><span>sophialu520 ↗</span></a>
+        <a href="../resume.html"><span class="mono">Résumé</span><span>View résumé →</span></a>
+      </div>
+    </section>
+    <section class="fl sky" id="fl-LC" data-fl="LC">
+      <div class="plate"><span class="mono pn">↑</span><span class="mono pe">Last call</span></div><svg class="rm" viewBox="0 0 350 190" aria-hidden="true"><rect x="0" y="0" width="350" height="190" fill="#26314a"></rect><circle cx="290" cy="46" r="20" fill="#f4efe4"></circle><circle cx="298" cy="40" r="18" fill="#26314a"></circle><circle cx="40" cy="30" r="1.5" fill="#f4efe4"></circle><circle cx="90" cy="60" r="1" fill="#f4efe4"></circle><circle cx="130" cy="24" r="1.5" fill="#f4efe4"></circle><circle cx="180" cy="50" r="1" fill="#f4efe4"></circle><circle cx="220" cy="80" r="1.5" fill="#f4efe4"></circle><circle cx="60" cy="110" r="1" fill="#f4efe4"></circle><circle cx="250" cy="120" r="1" fill="#f4efe4"></circle><circle cx="320" cy="110" r="1.5" fill="#f4efe4"></circle><circle cx="150" cy="140" r="1" fill="#f4efe4"></circle><rect x="115" y="70" width="120" height="84" rx="3" fill="#fffaf2" stroke="#f4efe4" stroke-width="1.5" transform="rotate(-4 175 112)"></rect><text x="175" y="118" text-anchor="middle" font-family="Instrument Serif, Georgia, serif" font-size="20" fill="#26314a" transform="rotate(-4 175 112)">See you soon</text><rect x="0.6" y="0.6" width="348.8" height="188.8" rx="5" fill="none" stroke="#26314a" stroke-width="1.2"></rect></svg>
+      <div class="inv"><div class="inv-in"><div class="mono" style="display: flex; justify-content: space-between; font-size: 10px; color: #5b5a57;"><span>You’re invited</span><span>Sophia Lu’s Event</span></div>
+        <div class="serif" style="font-size: 34px; line-height: 36px; margin-top: 10px;">The Portfolio Social</div><p class="small" style="margin-top: 6px;">Date: Today · Location: New York City</p><span class="stamp mono">Attended</span></div></div>
+      <h2 class="serif h" style="color: #f4efe4;">See you at the next one</h2>
+      <a class="rsvp" href="https://luma.com/calendar/manage/cal-vO59OAj2ESKwTxF" target="_blank" rel="noopener"><span><span class="mono" style="display: block; font-size: 10px; color: #5b5a57;">Next event · New York City</span>RSVP</span><span aria-hidden="true">→</span></a>
+      <a class="lc-link" href="https://www.linkedin.com/in/sophialu520/" target="_blank" rel="noopener">Not in NYC? Let’s talk anyway →</a>
+      <a class="lc-link" href="#">No date yet? Get on the list →</a>
+      <p class="serif thanks">Thanks for coming to my Social. Let’s build something people want to be part of.</p>
+      <div class="foot"><a href="../resume.html">Résumé ↗</a><a href="https://www.linkedin.com/in/sophialu520/" target="_blank" rel="noopener">LinkedIn ↗</a><a href="mailto:lusophia95@gmail.com">Email ↗</a></div>
+      <a class="lc-link" href="index.html" style="margin-top: 18px;">↺ Start over from the invitation</a>
+    </section>
+  </div>
+  <header class="bar">
+    <a href="index.html"><span class="serif" style="font-size: 21px; line-height: 22px;">Sophia Lu</span><span class="mono" style="font-size: 8.5px; line-height: 12px; color: #5b5a57;">Portfolio After Hours</span></a>
+    <span class="mono chip">{{floorLabel}}</span>
+  </header>
+  <button type="button" class="shade" onClick="{{close}}" aria-label="Close the elevator"></button>
+  <div class="panel" role="dialog" aria-label="Elevator"><div class="mono panel-h">Elevator · pick a floor</div><button type="button" class="eb {{on.oLC}}" onClick="{{go.gLC}}"><span class="mono ebn">↑</span><span class="ebt">Next event</span></button><button type="button" class="eb {{on.oR2}}" onClick="{{go.gR2}}"><span class="mono ebn">R2</span><span class="ebt">Meet the host</span></button><button type="button" class="eb {{on.oR1}}" onClick="{{go.gR1}}"><span class="mono ebn">R1</span><span class="ebt">Words around the room</span></button><button type="button" class="eb {{on.o6}}" onClick="{{go.g6}}"><span class="mono ebn">06</span><span class="ebt">Social hour</span></button><button type="button" class="eb {{on.o5}}" onClick="{{go.g5}}"><span class="mono ebn">05</span><span class="ebt">AI Demo Day</span></button><button type="button" class="eb {{on.o4}}" onClick="{{go.g4}}"><span class="mono ebn">04</span><span class="ebt">Tutor Me</span></button><button type="button" class="eb {{on.o3}}" onClick="{{go.g3}}"><span class="mono ebn">03</span><span class="ebt">MegPrime Pay</span></button><button type="button" class="eb {{on.o2}}" onClick="{{go.g2}}"><span class="mono ebn">02</span><span class="ebt">PMMCA</span></button><button type="button" class="eb {{on.o1}}" onClick="{{go.g1}}"><span class="mono ebn">01</span><span class="ebt">Artifice</span></button><button type="button" class="eb {{on.oL}}" onClick="{{go.gL}}"><span class="mono ebn">L</span><span class="ebt">Lobby</span></button></div>
+  <button type="button" class="elev" onClick="{{toggle}}" aria-label="Open the elevator"><span class="ic mono">▲<br>▼</span>Elevator</button>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+const LABEL = {"L": "Lobby", "1": "Floor 01 · Artifice", "2": "Floor 02 · PMMCA", "3": "Floor 03 · MegPrime Pay", "4": "Floor 04 · Tutor Me", "5": "Floor 05 · AI Demo Day", "6": "Floor 06 · Social hour", "R1": "Rooftop 1 · Words around the room", "R2": "Rooftop 2 · Meet the host", "LC": "Last call · Next event"};
+const IDS = ["L", "1", "2", "3", "4", "5", "6", "R1", "R2", "LC"];
+class Component extends DCLogic {
+  track(e) {
+    const el = e && e.currentTarget;
+    if (!el || !el.querySelectorAll) return;
+    const c = el.getBoundingClientRect();
+    const mid = c.top + c.height * 0.45;
+    let cur = null;
+    el.querySelectorAll('[data-fl]').forEach((n) => { const r = n.getBoundingClientRect(); if (r.top <= mid && r.bottom > mid) cur = n.getAttribute('data-fl'); });
+    const s = this.state || {};
+    if (cur && cur !== s.cur) this.setState({ cur });
+  }
+  jump(id, e) {
+    const btn = e && e.currentTarget;
+    const root = btn && btn.closest ? btn.closest('.scene') : null;
+    const sc = root ? root.querySelector('.scroller') : null;
+    const t = root ? root.querySelector('#fl-' + id) : null;
+    if (sc && t) {
+      const d = t.getBoundingClientRect().top - sc.getBoundingClientRect().top;
+      sc.scrollBy({ top: d, behavior: 'smooth' });
+    }
+    this.setState({ open: false, cur: id });
+  }
+  renderVals() {
+    const s = this.state || {};
+    const cur = s.cur || 'L';
+    const go = {}, on = {};
+    IDS.forEach((id) => { go['g' + id] = (e) => this.jump(id, e); on['o' + id] = cur === id ? 'on' : ''; });
+    return {
+      openCls: s.open ? 'open' : '',
+      floorLabel: LABEL[cur] || 'Lobby',
+      toggle: () => this.setState({ open: !s.open }),
+      close: () => this.setState({ open: false }),
+      onScroll: (e) => this.track(e),
+      go, on,
+    };
+  }
+}
+</script>
+</body>
+</html>
